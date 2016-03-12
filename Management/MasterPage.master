@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Management_MasterPage" %>
+
+<%@ Register src="/UserControl/ucLogon/ucLogon.ascx" tagname="ucLogon" tagprefix="uc1" %>
+<%@ Register src="/UserControl/ucColorBox/ucColorBox.ascx" tagname="ucColorBox" tagprefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="/Management/CSS/cssDefault.css" rel="stylesheet" type="text/css" />
+    <link href="/Management/CSS/cssCustom.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/cssControl.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        #dvLogout
+        {
+            /*position:fixed;top:10px;right:10px;*/
+        }
+        body
+        {
+            background-color:#fafafa;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <center>
+            <asp:Panel ID="pnLogin" runat="server" Visible="true">
+                <div id="dvLogout" style='<%=(Session["login"]!=null?"position:fixed;top:10px;right:10px;":"")%>'>
+                    <uc1:ucLogon ID="ucLogon1" runat="server" UrlManagement=""/>
+                </div>
+            </asp:Panel>
+            <asp:Panel ID="pnDefault" runat="server" Visible="false">
+                <div style="width:800px;margin-top:10px;background-color:#ffffff;border:1px solid #dddddd;">
+                    <div style="background-color:#F7F7F7;border-bottom:1px solid #ddd;padding:5px;">
+                        <asp:ContentPlaceHolder id="cphBodyHead" runat="server">
+                    
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div style="padding:10px;">
+                    <asp:ContentPlaceHolder id="cphBody" runat="server">
+                    
+                    </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </asp:Panel>
+            <div class="copyRight">
+                ©<%=DateTime.Now.Year %> GooDesign.in.th All rights reserved. Powered by <a href="http://www.goodesign.in.th">GooDesign.in.th</a>
+            </div>
+        </center>
+        <uc2:ucColorBox ID="ucColorBox1" runat="server" UID="MasterPage" ColorBoxIframeName="cbIframe" ColorBoxIframeRefreshOnCloseName="cbIframeRefresh" ColorBoxPhotoName="cbPhoto"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+    <link rel="stylesheet" href="/CSS/cssDefault.css"/>
+    <link href="/Plugin/ColorBox/colorbox.css" rel="stylesheet" />
+    <link href="/CSS/cssControl.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="cphHeader" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="landing">
+    <form id="form1" runat="server">
+        <div id="page-wrapper">
+		    <!-- Header -->
+		    <header id="header" class="alt">
+			    <h1><a href="/">P 5 Graphic Design</a></h1>
+			    <nav id="nav">
+				    <ul>
+					    <li class="special">
+						    <a href="#menu" class="menuToggle"><span>Menu</span></a>
+						    <div id="menu">
+							    <ul>
+								    <li><a href="/">Home</a></li>
+                                    <li><a href="#Product" class="more scrolly">Product</a></li>
+                                    <asp:Label ID="menuProductGroup" runat="server" />
+                                    <li><a href="#Portfolio" class="more scrolly">Portfolio</a></li>
+                                    <li><a href="#CompanyProfile" class="more scrolly">Company Profile</a></li>
+								    <li><a href="/SendMail" class="cbDefault">Send Mail</a></li>
+								    <li><a href="#ContactUs" class="more scrolly">Contact us</a></li>
+							    </ul>
+						    </div>
+					    </li>
+				    </ul>
+			    </nav>
+		    </header>
+            <asp:ContentPlaceHolder id="cphBody" runat="server">
+        
+            </asp:ContentPlaceHolder>
+		    <!-- Footer -->
+		    <footer id="footer" style="padding:20px 10px 5px 10px;">
+			    <%--<ul class="icons">
+				    <li><a href="https://www.facebook.com/profile.php?id=100008755424323" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+			    </ul>--%>
+			    <ul class="copyright">
+                    <li>&copy; P5GraphicDesign</li>
+				    <!--<li>&copy; GooDesign.in.th</li><li>Design: <a href="http://www.goodesign.in.th">goodesign.in.th</a></li>-->
+			    </ul>
+		    </footer>
+	    </div>
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/Plugin/ColorBox/jquery.colorbox-min.js"></script>
+	    <script src="/assets/js/jquery.scrollex.min.js"></script>
+	    <script src="/assets/js/jquery.scrolly.min.js"></script>
+	    <script src="/assets/js/skel.min.js"></script>
+	    <script src="/assets/js/util.js"></script>
+	    <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+	    <script src="/assets/js/main.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".cbDefault").colorbox({ 
+			        fixed:true,
+                    iframe: true, 
+                    width: "600px", height: "70%",
+                    rel: "nofollow",
+                    transition: "elastic"/*elastic,fade*/
+                });
+                $(".cbSendMail").colorbox({
+                    fixed: true,
+                    iframe: true,
+                    width: "500px", height: "400px",
+                    rel: "nofollow",
+                    transition: "elastic"/*elastic,fade*/
+                });
+                $(".cbRefresh").colorbox({
+			        fixed:true,
+                    iframe: true,
+                    rel: 'Default',
+                    width: "600px", height: "70%",
+                    rel: "nofollow",
+                    onClosed: function () { location.reload(true); }
+                });
+            });
+        </script>
+    </form>
+</body>
+</html>

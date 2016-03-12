@@ -1,0 +1,781 @@
+﻿/*################################ Button ################################
+    <a href="Default.aspx" class="Button AddTH"></a>
+*/
+.Button
+{
+    background:url('../Images/Button/Button.png?v=002') no-repeat scroll 0 0 transparent;
+    width: 90px;height: 30px;display:inline-block;cursor:pointer;border:none 0px;
+}
+input[type=submit].Button
+{
+    padding:0;
+    border:0 none;
+	background-color:inherit;
+	color:#444;
+    -moz-border-radius:0 0;-webkit-border-radius:0 0;border-radius:0 0;
+    -moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;
+}
+input[type=submit].Button:hover{border-color:none;background-color:inherit;}
+
+.Button.AddEN           {background-position:0px -60px;}
+.Button.AddEN:hover     {background-position:0px -30px;}
+.Button.AddEN:active     {background-position:0px 0px;}
+
+.Button.AddTH           {background-position:-90px -60px;}
+.Button.AddTH:hover     {background-position:-90px -30px;}
+.Button.AddTH:active     {background-position:-90px 0px;}
+
+.Button.CancelEN        {background-position:-180px -60px;}
+.Button.CancelEN:hover  {background-position:-180px -30px;}
+.Button.CancelEN:active  {background-position:-180px 0px;}
+
+.Button.CancelTH        {background-position:-270px -60px;}
+.Button.CancelTH:hover  {background-position:-270px -30px;}
+.Button.CancelTH:active  {background-position:-270px 0px;}
+
+.Button.LoginEN         {background-position:0px -150px;}
+.Button.LoginEN:hover   {background-position:0px -120px;}
+.Button.LoginEN:active   {background-position:0px -90px;}
+
+.Button.LoginTH         {background-position:-90px -150px;}
+.Button.LoginTH:hover   {background-position:-90px -120px;}
+.Button.LoginTH:active   {background-position:-90px -90px;}
+
+.Button.LogoutEN        {background-position:-180px -150px;}
+.Button.LogoutEN:hover  {background-position:-180px -120px;}
+.Button.LogoutEN:active  {background-position:-180px -90px;}
+
+.Button.LogoutTH        {background-position:-270px -150px;}
+.Button.LogoutTH:hover  {background-position:-270px -120px;}
+.Button.LogoutTH:active  {background-position:-270px -90px;}
+
+.Button.RemoveEN        {background-position:0px -240px;}
+.Button.RemoveEN:hover  {background-position:0px -210px;}
+.Button.RemoveEN:active  {background-position:0px -180px;}
+
+.Button.RemoveTH        {background-position:-90px -240px;}
+.Button.RemoveTH:hover  {background-position:-90px -210px;}
+.Button.RemoveTH:active  {background-position:-90px -180px;}
+
+.Button.SaveEN          {background-position:-180px -240px;}
+.Button.SaveEN:hover    {background-position:-180px -210px;}
+.Button.SaveEN:active    {background-position:-180px -180px;}
+
+.Button.SaveTH          {background-position:-270px -240px;}
+.Button.SaveTH:hover    {background-position:-270px -210px;}
+.Button.SaveTH:active    {background-position:-270px -180px;}
+
+.Button.SubmitEN        {background-position:0px -330px;}
+.Button.SubmitEN:hover  {background-position:0px -300px;}
+.Button.SubmitEN:active  {background-position:0px -270px;}
+
+.Button.SubmitTH        {background-position:-90px -330px;}
+.Button.SubmitTH:hover  {background-position:-90px -300px;}
+.Button.SubmitTH:active  {background-position:-90px -270px;}
+
+.Button.RegisterEN      {background-position:-180px -330px;}
+.Button.RegisterEN:hover{background-position:-180px -300px;}
+.Button.RegisterEN:active{background-position:-180px -270px;}
+
+.Button.RegisterTH      {background-position:-270px -330px;}
+.Button.RegisterTH:hover{background-position:-270px -300px;}
+.Button.RegisterTH:active{background-position:-270px -270px;}
+
+.Button.SearchEN        {background-position:0px -420px;}
+.Button.SearchEN:hover  {background-position:0px -390px;}
+.Button.SearchEN:active  {background-position:0px -360px;}
+
+.Button.SearchTH        {background-position:-90px -420px;}
+.Button.SearchTH:hover  {background-position:-90px -390px;}
+.Button.SearchTH:active  {background-position:-90px -360px;}
+
+.Button.SendmailEN      {background-position:-180px -420px;}
+.Button.SendmailEN:hover{background-position:-180px -390px;}
+.Button.SendmailEN:active{background-position:-180px -360px;}
+
+.Button.SendmailTH      {background-position:-270px -420px;}
+.Button.SendmailTH:hover{background-position:-270px -390px;}
+.Button.SendmailTH:active{background-position:-270px -360px;}
+
+.Button.CalculateEN        {background-position:0px -510px;}
+.Button.CalculateEN:hover  {background-position:0px -480px;}
+.Button.CalculateEN:active  {background-position:0px -450px;}
+
+.Button.CalculateTH        {background-position:-90px -510px;}
+.Button.CalculateTH:hover  {background-position:-90px -480px;}
+.Button.CalculateTH:active  {background-position:-90px -450px;}
+
+.Button.BuyEN      {background-position:-180px -510px;}
+.Button.BuyEN:hover{background-position:-180px -480px;}
+.Button.BuyEN:active{background-position:-180px -450px;}
+
+.Button.BuyTH      {background-position:-270px -510px;}
+.Button.BuyTH:hover{background-position:-270px -480px;}
+.Button.BuyTH:active{background-position:-270px -450px;}
+
+.Button.QuestionEN        {background-position:0px -600px;}
+.Button.QuestionEN:hover  {background-position:0px -570px;}
+.Button.QuestionEN:active  {background-position:0px -540px;}
+
+.Button.QuestionTH        {background-position:-90px -600px;}
+.Button.QuestionTH:hover  {background-position:-90px -570px;}
+.Button.QuestionTH:active  {background-position:-90px -540px;}
+
+.Button.AnswerEN      {background-position:-180px -600px;}
+.Button.AnswerEN:hover{background-position:-180px -570px;}
+.Button.AnswerEN:active{background-position:-180px -540px;}
+
+.Button.AnswerTH      {background-position:-270px -600px;}
+.Button.AnswerTH:hover{background-position:-270px -570px;}
+.Button.AnswerTH:active{background-position:-270px -540px;}
+
+.Button.ExportEN        {background-position:0px -690px;}
+.Button.ExportEN:hover  {background-position:0px -660px;}
+.Button.ExportEN:active  {background-position:0px -630px;}
+
+.Button.ExportTH        {background-position:-90px -690px;}
+.Button.ExportTH:hover  {background-position:-90px -660px;}
+.Button.ExportTH:active  {background-position:-90px -630px;}
+
+.Button.ImportEN      {background-position:-180px -690px;}
+.Button.ImportEN:hover{background-position:-180px -660px;}
+.Button.ImportEN:active{background-position:-180px -630px;}
+
+.Button.ImportTH      {background-position:-270px -690px;}
+.Button.ImportTH:hover{background-position:-270px -660px;}
+.Button.ImportTH:active{background-position:-270px -630px;}
+
+.Button.DownloadEN        {background-position:0px -780px;}
+.Button.DownloadEN:hover  {background-position:0px -750px;}
+.Button.DownloadEN:active  {background-position:0px -720px;}
+
+.Button.DownloadTH        {background-position:-90px -780px;}
+.Button.DownloadTH:hover  {background-position:-90px -750px;}
+.Button.DownloadTH:active  {background-position:-90px -720px;}
+
+.Button.UploadEN      {background-position:-180px -780px;}
+.Button.UploadEN:hover{background-position:-180px -750px;}
+.Button.UploadEN:active{background-position:-180px -720px;}
+
+.Button.UploadTH      {background-position:-270px -780px;}
+.Button.UploadTH:hover{background-position:-270px -750px;}
+.Button.UploadTH:active{background-position:-270px -720px;}
+/*################################ Button Pure CSS ###############################
+    <asp:Button ID="btSubmit" runat="server" Text="ทดสอบภาษาไทย" CssClass="ButtonBlue" />
+    <asp:Button ID="btCancel" runat="server" Text="ยกเลิก" CssClass="ButtonRed" />
+    <asp:Button ID="btGreen" runat="server" Text="ปุ่มนี้สีเขียว" CssClass="ButtonGreen" />
+    <asp:Button ID="btWhite" runat="server" Text="ปุ่มนี้สีเขียว" CssClass="ButtonWhite" />
+*/
+.ButtonBlue
+{
+    /*float: right;*/
+    border: 1px solid #00748f;
+    height: 30px;
+    /*width: 80px;*/
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    font:  14px Arial, Helvetica;
+    color: #fafafa;
+    text-transform: none;        
+    background-color: #0d91e5;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#49b6f4), to(#0d91e5));
+    background-image: -webkit-linear-gradient(top, #49b6f4, #0d91e5);
+    background-image: -moz-linear-gradient(top, #49b6f4, #0d91e5);
+    background-image: -ms-linear-gradient(top, #49b6f4, #0d91e5);
+    background-image: -o-linear-gradient(top, #49b6f4, #0d91e5);
+    background-image: linear-gradient(top, #49b6f4, #0d91e5);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+}
+.ButtonBlue:hover
+{
+    background-color: #49b6f4;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0d91e5), to(#49b6f4));
+    background-image: -webkit-linear-gradient(top, #0d91e5, #49b6f4);
+    background-image: -moz-linear-gradient(top, #0d91e5, #49b6f4);
+    background-image: -ms-linear-gradient(top, #0d91e5, #49b6f4);
+    background-image: -o-linear-gradient(top, #0d91e5, #49b6f4);
+    background-image: linear-gradient(top, #0d91e5, #49b6f4);
+}
+.ButtonBlue:active
+{
+    outline: 0;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+.ButtonBlue::-moz-focus-inner
+{
+    border: 0;
+}
+.ButtonRed
+{
+    /*float: right;*/
+    border: 1px solid #8f0000;
+    height: 30px;
+    /*width: 80px;*/
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    font:  14px Arial, Helvetica;
+    color: #fafafa;
+    text-transform: none;        
+    background-color: #e50d0d;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f44949), to(#e50d0d));
+    background-image: -webkit-linear-gradient(top, #f44949, #e50d0d);
+    background-image: -moz-linear-gradient(top, #f44949, #e50d0d);
+    background-image: -ms-linear-gradient(top, #f44949, #e50d0d);
+    background-image: -o-linear-gradient(top, #f44949, #e50d0d);
+    background-image: linear-gradient(top, #f44949, #e50d0d);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+}
+.ButtonRed:hover
+{
+    background-color: #f44949;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e50d0d), to(#f44949));
+    background-image: -webkit-linear-gradient(top, #e50d0d, #f44949);
+    background-image: -moz-linear-gradient(top, #e50d0d, #f44949);
+    background-image: -ms-linear-gradient(top, #e50d0d, #f44949);
+    background-image: -o-linear-gradient(top, #e50d0d, #f44949);
+    background-image: linear-gradient(top, #e50d0d, #f44949);
+}
+.ButtonRed:active
+{
+    outline: 0;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+.ButtonRed::-moz-focus-inner
+{
+    border: 0;
+}
+.ButtonGreen
+{
+    /*float: right;*/
+    border: 1px solid #577e02;
+    height: 30px;
+    /*width: 80px;*/
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    font:  14px Arial, Helvetica;
+    color: #fafafa;
+    text-transform: none;        
+    background-color: #3f9e04;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#75cf1f), to(#3f9e04));
+    background-image: -webkit-linear-gradient(top, #75cf1f, #3f9e04);
+    background-image: -moz-linear-gradient(top, #75cf1f, #3f9e04);
+    background-image: -ms-linear-gradient(top, #75cf1f, #3f9e04);
+    background-image: -o-linear-gradient(top, #75cf1f, #3f9e04);
+    background-image: linear-gradient(top, #75cf1f, #3f9e04);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+}
+.ButtonGreen:hover
+{
+    background-color: #75cf1f;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#3f9e04), to(#75cf1f));
+    background-image: -webkit-linear-gradient(top, #3f9e04, #75cf1f);
+    background-image: -moz-linear-gradient(top, #3f9e04, #75cf1f);
+    background-image: -ms-linear-gradient(top, #3f9e04, #75cf1f);
+    background-image: -o-linear-gradient(top, #3f9e04, #75cf1f);
+    background-image: linear-gradient(top, #3f9e04, #75cf1f);
+}
+.ButtonGreen:active
+{
+    outline: 0;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+.ButtonGreen::-moz-focus-inner
+{
+    border: 0;
+}   
+.ButtonWhite
+{
+    /*float: right;*/
+    border: 1px solid #a3a3a2;
+    height: 30px;
+    /*width: 80px;*/
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    font:  14px Arial, Helvetica;
+    color: #454545;
+    text-transform: none;        
+    background-color: #d9d9da;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#d9d9da));
+    background-image: -webkit-linear-gradient(top, #fafafa, #d9d9da);
+    background-image: -moz-linear-gradient(top, #fafafa, #d9d9da);
+    background-image: -ms-linear-gradient(top, #fafafa, #d9d9da);
+    background-image: -o-linear-gradient(top, #fafafa, #d9d9da);
+    background-image: linear-gradient(top, #fafafa, #d9d9da);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    /*text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);*/
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+}
+.ButtonWhite:hover
+{
+    background-color: #fafafa;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d9d9da), to(#fafafa));
+    background-image: -webkit-linear-gradient(top, #d9d9da, #fafafa);
+    background-image: -moz-linear-gradient(top, #d9d9da, #fafafa);
+    background-image: -ms-linear-gradient(top, #d9d9da, #fafafa);
+    background-image: -o-linear-gradient(top, #d9d9da, #fafafa);
+    background-image: linear-gradient(top, #d9d9da, #fafafa);
+}
+.ButtonWhite:active
+{
+    outline: 0;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+.ButtonWhite::-moz-focus-inner
+{
+    border: 0;
+}
+.ButtonBlack
+{
+    /*float: right;*/
+    border: 1px solid #010101;
+    height: 30px;
+    /*width: 80px;*/
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    font:  14px Arial, Helvetica;
+    color: #fafafa;
+    text-transform: none;        
+    background-color: #1f1f1f;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#494949), to(#1f1f1f));
+    background-image: -webkit-linear-gradient(top, #494949, #1f1f1f);
+    background-image: -moz-linear-gradient(top, #494949, #1f1f1f);
+    background-image: -ms-linear-gradient(top, #494949, #1f1f1f);
+    background-image: -o-linear-gradient(top, #494949, #1f1f1f);
+    background-image: linear-gradient(top, #494949, #1f1f1f);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+}
+.ButtonBlack:hover
+{
+    background-color: #494949;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1f1f1f), to(#494949));
+    background-image: -webkit-linear-gradient(top, #1f1f1f, #494949);
+    background-image: -moz-linear-gradient(top, #1f1f1f, #494949);
+    background-image: -ms-linear-gradient(top, #1f1f1f, #494949);
+    background-image: -o-linear-gradient(top, #1f1f1f, #494949);
+    background-image: linear-gradient(top, #1f1f1f, #494949);
+}
+.ButtonBlack:active
+{
+    outline: 0;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+.ButtonBlack::-moz-focus-inner
+{
+    border: 0;
+}
+/*################################ Icon32 ################################
+    <a href="Default.aspx" class="Icon32 Add"></a>
+    <div class="Icon32 Photo normal"></div>
+*/
+.Icon32
+{
+    background:url('../Images/Icon/Icon32.png?v=002') no-repeat scroll 0 0 transparent;
+    width: 32px;height:32px;display:inline-block;vertical-align:middle;
+}
+.Icon32.Add            {background-position: -32px 0px;}
+.Icon32.Add:hover      {background-position: 0px 0px;}
+.Icon32.Add.Normal     {background-position: 0px 0px;}
+.Icon32.Delete         {background-position: -96px 0px;}
+.Icon32.Delete:hover   {background-position: -64px 0px;}
+.Icon32.Delete.Normal  {background-position: -64px 0px;}
+.Icon32.True           {background-position: -160px 0px;}
+.Icon32.True:hover     {background-position: -128px 0px;}
+.Icon32.True.Normal    {background-position: -128px 0px;}
+.Icon32.False          {background-position: -224px 0px;}
+.Icon32.False:hover    {background-position: -192px 0px;}
+.Icon32.False.Normal   {background-position: -192px 0px;}
+.Icon32.Warn           {background-position: -288px 0px;}
+.Icon32.Warn:hover     {background-position: -256px 0px;}
+.Icon32.Warn.Normal    {background-position: -256px 0px;}
+.Icon32.Address        {background-position: -32px -32px;}
+.Icon32.Address:hover  {background-position: 0px -32px;}
+.Icon32.Address.Normal {background-position: 0px -32px;}
+.Icon32.Back           {background-position: -96px -32px;}
+.Icon32.Back:hover     {background-position: -64px -32px;}
+.Icon32.Back.Normal    {background-position: -64px -32px;}
+.Icon32.Forward        {background-position: -160px -32px;}
+.Icon32.Forward:hover  {background-position: -128px -32px;}
+.Icon32.Forward.Normal {background-position: -128px -32px;}
+.Icon32.Bookmark       {background-position: -224px -32px;}
+.Icon32.Bookmark:hover {background-position: -192px -32px;}
+.Icon32.Bookmark.Normal{background-position: -192px -32px;}
+.Icon32.Calendar       {background-position: -288px -32px;}
+.Icon32.Calendar:hover {background-position: -256px -32px;}
+.Icon32.Calendar.Normal{background-position: -256px -32px;}
+.Icon32.Chat           {background-position: -32px -64px;}
+.Icon32.Chat:hover     {background-position: 0px -64px;}
+.Icon32.Chat.Normal    {background-position: 0px -64px;}
+.Icon32.Comment        {background-position: -96px -64px;}
+.Icon32.Comment:hover  {background-position: -64px -64px;}
+.Icon32.Comment.Normal {background-position: -64px -64px;}
+.Icon32.Config         {background-position: -160px -64px;}
+.Icon32.Config:hover   {background-position: -128px -64px;}
+.Icon32.Config.Normal  {background-position: -128px -64px;}
+.Icon32.Download       {background-position: -224px -64px;}
+.Icon32.Download:hover {background-position: -192px -64px;}
+.Icon32.Download.Normal{background-position: -192px -64px;}
+.Icon32.Upload         {background-position: -288px -64px;}
+.Icon32.Upload:hover   {background-position: -256px -64px;}
+.Icon32.Upload.Normal  {background-position: -256px -64px;}
+.Icon32.Edit           {background-position: -32px -96px;}
+.Icon32.Edit:hover     {background-position: 0px -96px;}
+.Icon32.Edit.Normal    {background-position: 0px -96px;}
+.Icon32.Flag           {background-position: -96px -96px;}
+.Icon32.Flag:hover     {background-position: -64px -96px;}
+.Icon32.Flag.Normal    {background-position: -64px -96px;}
+.Icon32.Folder         {background-position: -160px -96px;}
+.Icon32.Folder:hover   {background-position: -128px -96px;}
+.Icon32.Folder.Normal  {background-position: -128px -96px;}
+.Icon32.Home           {background-position: -224px -96px;}
+.Icon32.Home:hover     {background-position: -192px -96px;}
+.Icon32.Home.Normal    {background-position: -192px -96px;}
+.Icon32.Star           {background-position: -288px -96px;}
+.Icon32.Star:hover     {background-position: -256px -96px;}
+.Icon32.Star.Normal    {background-position: -256px -96px;}
+.Icon32.Info           {background-position: -32px -128px;}
+.Icon32.Info:hover     {background-position: 0px -128px;}
+.Icon32.Info.Normal    {background-position: 0px -128px;}
+.Icon32.Login          {background-position: -96px -128px;}
+.Icon32.Login:hover    {background-position: -64px -128px;}
+.Icon32.Login.Normal   {background-position: -64px -128px;}
+.Icon32.Logout         {background-position: -160px -128px;}
+.Icon32.Logout:hover   {background-position: -128px -128px;}
+.Icon32.Logout.Normal  {background-position: -128px -128px;}
+.Icon32.Mail           {background-position: -224px -128px;}
+.Icon32.Mail:hover     {background-position: -192px -128px;}
+.Icon32.Mail.Normal    {background-position: -192px -128px;}
+.Icon32.Phone          {background-position: -288px -128px;}
+.Icon32.Phone:hover    {background-position: -256px -128px;}
+.Icon32.Phone.Normal   {background-position: -256px -128px;}
+.Icon32.Photo          {background-position: -32px -160px;}
+.Icon32.Photo:hover    {background-position: 0px -160px;}
+.Icon32.Photo.Normal   {background-position: 0px -160px;}
+.Icon32.Refresh        {background-position: -96px -160px;}
+.Icon32.Refresh:hover  {background-position: -64px -160px;}
+.Icon32.Refresh.Normal {background-position: -64px -160px;}
+.Icon32.Search         {background-position: -160px -160px;}
+.Icon32.Search:hover   {background-position: -128px -160px;}
+.Icon32.Search.Normal  {background-position: -128px -160px;}
+.Icon32.User           {background-position: -224px -160px;}
+.Icon32.User:hover     {background-position: -192px -160px;}
+.Icon32.User.Normal    {background-position: -192px -160px;}
+
+/*################################ Icon24 ################################
+    <a href="Default.aspx" class="Icon24 Add"></a>
+    <div class="Icon24 Photo normal"></div>
+*/
+.Icon24
+{
+    background:url('../Images/Icon/Icon24.png?v=001') no-repeat scroll 0 0 transparent;
+    width: 24px;height:24px;display:inline-block;vertical-align:middle;
+}
+.Icon24.Add            {background-position: -24px 0px;}
+.Icon24.Add:hover      {background-position: 0px 0px;}
+.Icon24.Add.Normal     {background-position: 0px 0px;}
+.Icon24.Delete         {background-position: -72px 0px;}
+.Icon24.Delete:hover   {background-position: -48px 0px;}
+.Icon24.Delete.Normal  {background-position: -48px 0px;}
+.Icon24.True           {background-position: -120px 0px;}
+.Icon24.True:hover     {background-position: -96px 0px;}
+.Icon24.True.Normal    {background-position: -96px 0px;}
+.Icon24.False          {background-position: -168px 0px;}
+.Icon24.False:hover    {background-position: -144px 0px;}
+.Icon24.False.Normal   {background-position: -144px 0px;}
+.Icon24.Warn           {background-position: -216px 0px;}
+.Icon24.Warn:hover     {background-position: -192px 0px;}
+.Icon24.Warn.Normal    {background-position: -192px 0px;}
+
+.Icon24.Address        {background-position: -24px -24px;}
+.Icon24.Address:hover  {background-position: 0px -24px;}
+.Icon24.Address.Normal {background-position: 0px -24px;}
+.Icon24.Back           {background-position: -72px -24px;}
+.Icon24.Back:hover     {background-position: -48px -24px;}
+.Icon24.Back.Normal    {background-position: -48px -24px;}
+.Icon24.Forward        {background-position: -120px -24px;}
+.Icon24.Forward:hover  {background-position: -96px -24px;}
+.Icon24.Forward.Normal {background-position: -96px -24px;}
+.Icon24.Bookmark       {background-position: -168px -24px;}
+.Icon24.Bookmark:hover {background-position: -144px -24px;}
+.Icon24.Bookmark.Normal{background-position: -144px -24px;}
+.Icon24.Calendar       {background-position: -216px -24px;}
+.Icon24.Calendar:hover {background-position: -192px -24px;}
+.Icon24.Calendar.Normal{background-position: -192px -24px;}
+
+.Icon24.Chat           {background-position: -24px -48px;}
+.Icon24.Chat:hover     {background-position: 0px -48px;}
+.Icon24.Chat.Normal    {background-position: 0px -48px;}
+.Icon24.Comment        {background-position: -72px -48px;}
+.Icon24.Comment:hover  {background-position: -48px -48px;}
+.Icon24.Comment.Normal {background-position: -48px -48px;}
+.Icon24.Config         {background-position: -120px -48px;}
+.Icon24.Config:hover   {background-position: -96px -48px;}
+.Icon24.Config.Normal  {background-position: -96px -48px;}
+.Icon24.Download       {background-position: -168px -48px;}
+.Icon24.Download:hover {background-position: -144px -48px;}
+.Icon24.Download.Normal{background-position: -144px -48px;}
+.Icon24.Upload         {background-position: -216px -48px;}
+.Icon24.Upload:hover   {background-position: -192px -48px;}
+.Icon24.Upload.Normal  {background-position: -192px -48px;}
+
+.Icon24.Edit           {background-position: -24px -72px;}
+.Icon24.Edit:hover     {background-position: 0px -72px;}
+.Icon24.Edit.Normal    {background-position: 0px -72px;}
+.Icon24.Flag           {background-position: -72px -72px;}
+.Icon24.Flag:hover     {background-position: -48px -72px;}
+.Icon24.Flag.Normal    {background-position: -48px -72px;}
+.Icon24.Folder         {background-position: -120px -72px;}
+.Icon24.Folder:hover   {background-position: -96px -72px;}
+.Icon24.Folder.Normal  {background-position: -96px -72px;}
+.Icon24.Home           {background-position: -168px -72px;}
+.Icon24.Home:hover     {background-position: -144px -72px;}
+.Icon24.Home.Normal    {background-position: -144px -72px;}
+.Icon24.Star           {background-position: -216px -72px;}
+.Icon24.Star:hover     {background-position: -192px -72px;}
+.Icon24.Star.Normal    {background-position: -192px -72px;}
+
+.Icon24.Info           {background-position: -24px -96px;}
+.Icon24.Info:hover     {background-position: 0px -96px;}
+.Icon24.Info.Normal    {background-position: 0px -96px;}
+.Icon24.Login          {background-position: -72px -96px;}
+.Icon24.Login:hover    {background-position: -48px -96px;}
+.Icon24.Login.Normal   {background-position: -48px -96px;}
+.Icon24.Logout         {background-position: -120px -96px;}
+.Icon24.Logout:hover   {background-position: -96px -96px;}
+.Icon24.Logout.Normal  {background-position: -96px -96px;}
+.Icon24.Mail           {background-position: -168px -96px;}
+.Icon24.Mail:hover     {background-position: -144px -96px;}
+.Icon24.Mail.Normal    {background-position: -144px -96px;}
+.Icon24.Phone          {background-position: -216px -96px;}
+.Icon24.Phone:hover    {background-position: -192px -96px;}
+.Icon24.Phone.Normal   {background-position: -192px -96px;}
+
+.Icon24.Photo          {background-position: -24px -120px;}
+.Icon24.Photo:hover    {background-position: 0px -120px;}
+.Icon24.Photo.Normal   {background-position: 0px -120px;}
+.Icon24.Refresh        {background-position: -72px -120px;}
+.Icon24.Refresh:hover  {background-position: -48px -120px;}
+.Icon24.Refresh.Normal {background-position: -48px -120px;}
+.Icon24.Search         {background-position: -120px -120px;}
+.Icon24.Search:hover   {background-position: -96px -120px;}
+.Icon24.Search.Normal  {background-position: -96px -120px;}
+.Icon24.User           {background-position: -168px -120px;}
+.Icon24.User:hover     {background-position: -144px -120px;}
+.Icon24.User.Normal    {background-position: -144px -120px;}
+
+/*################################ Icon16 ################################
+    <a href="Default.aspx" class="Icon16 Add"></a>
+    <div class="Icon16 Photo normal"></div>
+*/
+.Icon16
+{
+    background:url('../Images/Icon/Icon16.png?v=002') no-repeat scroll 0 0 transparent;
+    width: 16px;height:16px;display:inline-block;vertical-align:middle;
+}
+.Icon16.Add            {background-position: -16px 0px;}
+.Icon16.Add:hover      {background-position: 0px 0px;}
+.Icon16.Add.Normal     {background-position: 0px 0px;}
+.Icon16.Delete         {background-position: -48px 0px;}
+.Icon16.Delete:hover   {background-position: -32px 0px;}
+.Icon16.Delete.Normal  {background-position: -32px 0px;}
+.Icon16.True           {background-position: -80px 0px;}
+.Icon16.True:hover     {background-position: -64px 0px;}
+.Icon16.True.Normal    {background-position: -64px 0px;}
+.Icon16.False          {background-position: -112px 0px;}
+.Icon16.False:hover    {background-position: -96px 0px;}
+.Icon16.False.Normal   {background-position: -96px 0px;}
+.Icon16.Warn           {background-position: -144px 0px;}
+.Icon16.Warn:hover     {background-position: -128px 0px;}
+.Icon16.Warn.Normal    {background-position: -128px 0px;}
+.Icon16.Address        {background-position: -16px -16px;}
+.Icon16.Address:hover  {background-position: 0px -16px;}
+.Icon16.Address.Normal {background-position: 0px -16px;}
+.Icon16.Back           {background-position: -48px -16px;}
+.Icon16.Back:hover     {background-position: -32px -16px;}
+.Icon16.Back.Normal    {background-position: -32px -16px;}
+.Icon16.Forward        {background-position: -80px -16px;}
+.Icon16.Forward:hover  {background-position: -64px -16px;}
+.Icon16.Forward.Normal {background-position: -64px -16px;}
+.Icon16.Bookmark       {background-position: -112px -16px;}
+.Icon16.Bookmark:hover {background-position: -96px -16px;}
+.Icon16.Bookmark.Normal{background-position: -96px -16px;}
+.Icon16.Calendar       {background-position: -144px -16px;}
+.Icon16.Calendar:hover {background-position: -128px -16px;}
+.Icon16.Calendar.Normal{background-position: -128px -16px;}
+.Icon16.Chat           {background-position: -16px -32px;}
+.Icon16.Chat:hover     {background-position: 0px -32px;}
+.Icon16.Chat.Normal    {background-position: 0px -32px;}
+.Icon16.Comment        {background-position: -48px -32px;}
+.Icon16.Comment:hover  {background-position: -32px -32px;}
+.Icon16.Comment.Normal {background-position: -32px -32px;}
+.Icon16.Config         {background-position: -80px -32px;}
+.Icon16.Config:hover   {background-position: -64px -32px;}
+.Icon16.Config.Normal  {background-position: -64px -32px;}
+.Icon16.Download       {background-position: -112px -32px;}
+.Icon16.Download:hover {background-position: -96px -32px;}
+.Icon16.Download.Normal{background-position: -96px -32px;}
+.Icon16.Upload         {background-position: -144px -32px;}
+.Icon16.Upload:hover   {background-position: -128px -32px;}
+.Icon16.Upload.Normal  {background-position: -128px -32px;}
+.Icon16.Edit           {background-position: -16px -48px;}
+.Icon16.Edit:hover     {background-position: 0px -48px;}
+.Icon16.Edit.Normal    {background-position: 0px -48px;}
+.Icon16.Flag           {background-position: -48px -48px;}
+.Icon16.Flag:hover     {background-position: -32px -48px;}
+.Icon16.Flag.Normal    {background-position: -32px -48px;}
+.Icon16.Folder         {background-position: -80px -48px;}
+.Icon16.Folder:hover   {background-position: -64px -48px;}
+.Icon16.Folder.Normal  {background-position: -64px -48px;}
+.Icon16.Home           {background-position: -112px -48px;}
+.Icon16.Home:hover     {background-position: -96px -48px;}
+.Icon16.Home.Normal    {background-position: -96px -48px;}
+.Icon16.Star           {background-position: -144px -48px;}
+.Icon16.Star:hover     {background-position: -128px -48px;}
+.Icon16.Star.Normal    {background-position: -128px -48px;}
+.Icon16.Info           {background-position: -16px -64px;}
+.Icon16.Info:hover     {background-position: 0px -64px;}
+.Icon16.Info.Normal    {background-position: 0px -64px;}
+.Icon16.Login          {background-position: -48px -64px;}
+.Icon16.Login:hover    {background-position: -32px -64px;}
+.Icon16.Login.Normal   {background-position: -32px -64px;}
+.Icon16.Logout         {background-position: -80px -64px;}
+.Icon16.Logout:hover   {background-position: -64px -64px;}
+.Icon16.Logout.Normal  {background-position: -64px -64px;}
+.Icon16.Mail           {background-position: -112px -64px;}
+.Icon16.Mail:hover     {background-position: -96px -64px;}
+.Icon16.Mail.Normal    {background-position: -96px -64px;}
+.Icon16.Phone          {background-position: -144px -64px;}
+.Icon16.Phone:hover    {background-position: -128px -64px;}
+.Icon16.Phone.Normal   {background-position: -128px -64px;}
+.Icon16.Photo          {background-position: -16px -80px;}
+.Icon16.Photo:hover    {background-position: 0px -80px;}
+.Icon16.Photo.Normal   {background-position: 0px -80px;}
+.Icon16.Refresh        {background-position: -48px -80px;}
+.Icon16.Refresh:hover  {background-position: -32px -80px;}
+.Icon16.Refresh.Normal {background-position: -32px -80px;}
+.Icon16.Search         {background-position: -80px -80px;}
+.Icon16.Search:hover   {background-position: -64px -80px;}
+.Icon16.Search.Normal  {background-position: -64px -80px;}
+.Icon16.User           {background-position: -112px -80px;}
+.Icon16.User:hover     {background-position: -96px -80px;}
+.Icon16.User.Normal    {background-position: -96px -80px;}
+
+/*################################ TextBox ################################*/
+.txtCenter
+{
+    text-align:center;
+}
+.txtDefault
+{
+    padding:5px;
+    background-color:#FFF;
+    border:1px solid #CCC;
+}
+
+/*############################## Gridview #################################
+Example : <PagerStyle CssClass="gvPager" />
+*/
+.gvPager
+{
+    display:block;
+}
+.gvPager td a
+{
+    position:relative;
+    top:10px;
+    margin-left:1px;
+    background-color: #F4F4F4;
+    padding: 5px 10px 5px 10px;
+    color: #646464;
+    text-decoration: none;
+            
+    border:1px solid #DDD;
+    border-radius: 50%;
+    -moz-border-radius:50%;
+	-webkit-border-radius:50%;
+    -o-box-shadow: 1px 1px 3px #C8C8C8;
+    -moz-box-shadow: 1px 1px 3px #C8C8C8;
+    -webkit-box-shadow: 1px 1px 3px #C8C8C8;
+    box-shadow: 1px 1px 3px #C8C8C8;
+}
+.gvPager td a:hover
+{
+    background-color: #0072B8;
+    color: #fff;
+}
+.gvPager td a:active
+{
+    background-color: #80C8F5;
+    color: #fff;
+}
+.gvPager span
+{
+    position:relative;
+    top:10px;
+    background-color: #80C8F5;
+    color: #FFF;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+            
+    border-radius: 50%;
+    -moz-border-radius:50%;
+	-webkit-border-radius:50%;
+    -o-box-shadow: 1px 1px 3px #C8C8C8;
+    -moz-box-shadow: 1px 1px 3px #C8C8C8;
+    -webkit-box-shadow: 1px 1px 3px #C8C8C8;
+    box-shadow: 1px 1px 3px #C8C8C8;
+}
+
+.btDefault
+{
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #DDD;
+	background-color:#FAFAFA;
+	padding:10px;
+	cursor:pointer;
+	color:#434343;
+}
+.btDefault:hover
+{
+	color:#FFF;
+	background-color:#E2E2E2;
+}

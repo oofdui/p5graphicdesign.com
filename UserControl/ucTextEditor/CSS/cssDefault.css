@@ -1,0 +1,75 @@
+﻿@import url("/Css/Font/cssFontFace.css");
+
+body 
+{
+    padding:10px;
+    margin:0px;
+    font-family:Tahoma;
+    font-size:10pt;
+    color:#333333;
+    background-color:#FBFBFB;
+    overflow:auto;
+}
+H1,H2,H3,H4
+{
+    font-family:thaisans_neuebold,tahoma;
+    margin:0px;padding:0px;
+}
+P
+{
+    font-family:thaisans_neueregular,tahoma;
+    margin:0px;padding:0px;
+}
+ol,ul,li
+{
+    margin:0px;
+}
+ul
+{
+    margin-top:5px;
+    margin-bottom:5px;
+}
+H1
+{
+    font-weight:normal;
+    font-size:20pt;
+}
+H2
+{
+    font-weight:normal;
+    font-size:18pt;
+}
+H3
+{
+    font-weight:normal;
+    font-size:16pt;
+}
+H4
+{
+    font-weight:normal;
+    font-size:14pt;
+}
+img
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    text-align:center;
+    vertical-align:middle;
+}
+A:link {color:#24a1cc; text-decoration: none;}
+A:visited {color:#24a1cc; text-decoration: none;}
+A:active {color:#313131; text-decoration: none;}
+A:hover {color:#5094ac; text-decoration:none;}
+ 
+hr {
+  border: none;
+  background-color: #d3d3d3;
+  color: #d3d3d3;
+  height: 1px;
+}
+table 
+{
+  border-spacing:0;
+  border-collapse:collapse;
+}

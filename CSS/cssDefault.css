@@ -1,0 +1,16 @@
+﻿@import url("Font/cssFontFace.css");
+
+.mainBackgroundColor{
+    background-color:#FEF200;
+}
+#menu{
+    background-color:#505050;
+}
+#menu ul > li > a {
+    color:#FFF100;
+}
+.submenu ul > li {
+border-top: 0!important;
+margin: 0!important;
+padding: 0!important;
+}
