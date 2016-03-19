@@ -54,6 +54,11 @@
                 <img src="Images/icSlider.png" alt="Product" title="Product" width="32px"/>  Product Manage
             </a>
         </div>
+        <div class="Menu">
+            <a href="PortfolioGroup.aspx">
+                <img src="Images/icPhotoGallery.png" alt="Portfolio" title="Portfolio" width="32px"/>  Portfolio Manage
+            </a>
+        </div>
     </fieldset>
     <fieldset class="GroupMenu">
         <legend>

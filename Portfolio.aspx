@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Product.aspx.cs" Inherits="Product" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Portfolio.aspx.cs" Inherits="Portfolio" %>
 
 <!DOCTYPE html>
 
@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="/CSS/cssDefault.css" rel="stylesheet" />
+    <link href="/Plugin/ColorBox/colorbox.css" rel="stylesheet" />
     <style>
         h1,h2,h3,h4,ol,ul,li,img,p{margin:0;padding:0;}
         ul,li{list-style-position:inside;}
@@ -35,10 +36,19 @@
                 </div>
                 <div style="clear:both;"></div>
             </div>
-            <div style="text-align:left;padding-top:10px;margin-top:10px;border-top:1px solid #DDD;">
+            <div style="text-align:center;padding-top:10px;margin-top:10px;border-top:1px solid #DDD;">
                 <asp:Label ID="lblContent" runat="server" />
             </div>
         </div>
     </form>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/Plugin/ColorBox/jquery.colorbox-min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".cbPhoto").colorbox({ rel: 'cbPhotoPortfolio', transition: "elastic", width: "90%", height: "90%", slideshow: true });
+        });
+    </script>
 </body>
 </html>

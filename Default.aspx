@@ -15,49 +15,26 @@
 	</section>
 	<section id="Product" class="wrapper style1 special" style="background-color:#FFF100;">
 		<div class="inner">
-			<header class="major">
+			<header class="major" style="padding:0!important;margin:0!important;">
 				<h2 style="font-family:thaisans_neuebold;color:#2E3842;">Product</h2>
 				<p style="padding:0;margin:0;color:#A39A01;">
                     <uc1:ucContent runat="server" ID="ucContentProduct" ContentName="Product"/>
 				</p>
 			</header>
-			<ul class="icons major">
+			<ul class="icons major" style="padding:0!important;margin:0!important;">
 				<asp:Label ID="lblProduct" runat="server" />
 			</ul>
 		</div>
 	</section>
     <section id="Portfolio" class="wrapper style3 special" style="background-color:#FAFAFA;color:#444;">
 		<div class="inner">
-			<header class="major">
+			<header class="major" style="padding:0!important;margin:0!important;">
 				<h2 style="color:#FFC90E;">Portfolio</h2>
 				<p>ผลงานที่ผ่านมา</p>
 			</header>
-			<ul class="features">
-				<li class="icon fa-paper-plane-o">
-					<h3>Arcu accumsan</h3>
-					<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-				</li>
-				<li class="icon fa-laptop">
-					<h3>Ac Augue Eget</h3>
-					<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-				</li>
-				<li class="icon fa-code">
-					<h3>Mus Scelerisque</h3>
-					<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-				</li>
-				<li class="icon fa-headphones">
-					<h3>Mauris Imperdiet</h3>
-					<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-				</li>
-				<li class="icon fa-heart-o">
-					<h3>Aenean Primis</h3>
-					<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-				</li>
-				<li class="icon fa-flag-o">
-					<h3>Tortor Ut</h3>
-					<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-				</li>
-			</ul>
+            <div style="margin:0!important;padding:0!important;">
+                <%=portfolioOut %>
+            </div>
 		</div>
 	</section>
     <section id="CompanyProfile" class="wrapper style4" style="background-color:#797979;">

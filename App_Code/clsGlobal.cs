@@ -17,7 +17,7 @@ public static class clsGlobal
         get { return _applicationName; }
         set { _applicationName = value; }
     }
-    private static string _applicationVersion = "1.1";
+    private static string _applicationVersion = "1.2";
     public static string ApplicationVersion
     {
         get { return _applicationVersion; }

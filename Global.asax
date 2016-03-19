@@ -20,6 +20,9 @@
             "Product/{id}/{name}/",
             "~/Product.aspx");
         routes.MapPageRoute("4",
+            "Portfolio/{id}/{name}/",
+            "~/Portfolio.aspx");
+        routes.MapPageRoute("5",
             "SendMail",
             "~/SendMail.aspx");
     }

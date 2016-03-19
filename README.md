@@ -1,6 +1,8 @@
 # p5graphicdesign.com
 ### เว็บโฆษณา
 
+* v.1.2
+	* Portfolio เสร็จ
 * v.1.1
 	* Content Management เสร็จแล้ว
 	* Product เสร็จแล้ว
