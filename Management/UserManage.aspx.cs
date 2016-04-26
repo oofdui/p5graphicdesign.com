@@ -201,37 +201,39 @@ public partial class Management_UserManage : System.Web.UI.Page
         var photoName = "";
         #endregion
         #region Procedure
-        #region Update
-        if (Request.QueryString["id"] != null && clsDefault.QueryStringChecker("command") == "edit")
+        try
         {
-            id = int.Parse(Request.QueryString["id"].ToString());
-            #region Photo Upload
-            if (fuPhoto.HasFile)
+            #region Update
+            if (Request.QueryString["id"] != null && clsDefault.QueryStringChecker("command") == "edit")
             {
-                var clsIO = new clsIO();
-                string outErrorMessage;
-                string outFilename;
-                #region Photo
-                if (clsIO.UploadPhoto(
-                    fuPhoto, pathUpload,
-                    tableDefault + id.ToString(),
-                    out outErrorMessage,
-                    out outFilename,
-                    maxWidth: photoWidth,
-                    maxHeight: photoHeight))
+                id = int.Parse(Request.QueryString["id"].ToString());
+                #region Photo Upload
+                if (fuPhoto.HasFile)
                 {
-                    photoName = outFilename;
-                }
-                else
-                {
-                    ucColorBox1.Alert("เกิดข้อผิดพลาด", "เกิดข้อผิดพลาดขณะอัพโหลดไฟล์รูปภาพ<br/>" + outErrorMessage, AlertImage: ucColorBox.Alerts.Fail);
-                    return;
+                    var clsIO = new clsIO();
+                    string outErrorMessage;
+                    string outFilename;
+                    #region Photo
+                    if (clsIO.UploadPhoto(
+                        fuPhoto, pathUpload,
+                        tableDefault + id.ToString(),
+                        out outErrorMessage,
+                        out outFilename,
+                        maxWidth: photoWidth,
+                        maxHeight: photoHeight))
+                    {
+                        photoName = outFilename;
+                    }
+                    else
+                    {
+                        ucColorBox1.Alert("เกิดข้อผิดพลาด", "เกิดข้อผิดพลาดขณะอัพโหลดไฟล์รูปภาพ<br/>" + outErrorMessage, AlertImage: ucColorBox.Alerts.Fail);
+                        return;
+                    }
+                    #endregion
                 }
                 #endregion
-            }
-            #endregion
-            if (clsSQL.Update(tableDefault,
-                new string[,]{
+                if (clsSQL.Update(tableDefault,
+                    new string[,]{
                     {"Photo",(!string.IsNullOrEmpty(photoName)?"'"+pathUpload+photoName+"'":"Photo")},
                     {"UserGroupUID",ddlUserGroup.SelectedItem.Value},
                     {"PName","'"+ddlPName.SelectedItem.Value+"'"},
@@ -254,48 +256,48 @@ public partial class Management_UserManage : System.Web.UI.Page
                     {"MWhen",functionGetDate},
                     {"Sort",clsSQL.CodeFilter(txtSort.Text)},
                     {"StatusFlag","'" + (cbActive.Checked ? "A" : "I") + "'"}
-                }, new string[,] { { parameterChar + "UID", id.ToString() } },
-                "UID=" + parameterChar + "UID",
-                out outSQL))
-            {
-                ucColorBox1.ReloadParent();
-            }
-            else
-            {
-                ucColorBox1.Alert("เกิดข้อผิดพลาดขณะบันทึกข้อมูล<br/>", outSQL, AlertImage: ucColorBox.Alerts.Fail);
-            }
-        }
-        #endregion
-        #region Insert
-        else
-        {
-            #region Photo Upload
-            if (fuPhoto.HasFile)
-            {
-                var clsIO = new clsIO();
-                string outErrorMessage;
-                string outFilename;
-                #region Photo
-                if (clsIO.UploadPhoto(
-                    fuPhoto, pathUpload,
-                    tableDefault + id.ToString(),
-                    out outErrorMessage,
-                    out outFilename,
-                    maxWidth: photoWidth,
-                    maxHeight: photoHeight))
+                    }, new string[,] { { parameterChar + "UID", id.ToString() } },
+                    "UID=" + parameterChar + "UID",
+                    out outSQL))
                 {
-                    photoName = outFilename;
+                    ucColorBox1.ReloadParent();
                 }
                 else
                 {
-                    ucColorBox1.Alert("เกิดข้อผิดพลาด", "เกิดข้อผิดพลาดขณะอัพโหลดไฟล์รูปภาพ<br/>" + outErrorMessage, AlertImage: ucColorBox.Alerts.Fail);
-                    return;
+                    ucColorBox1.Alert("เกิดข้อผิดพลาดขณะบันทึกข้อมูล<br/>", outSQL, AlertImage: ucColorBox.Alerts.Fail);
                 }
-                #endregion
             }
             #endregion
-            if (clsSQL.Insert(tableDefault,
-                new string[,]{
+            #region Insert
+            else
+            {
+                #region Photo Upload
+                if (fuPhoto.HasFile)
+                {
+                    var clsIO = new clsIO();
+                    string outErrorMessage;
+                    string outFilename;
+                    #region Photo
+                    if (clsIO.UploadPhoto(
+                        fuPhoto, pathUpload,
+                        tableDefault + id.ToString(),
+                        out outErrorMessage,
+                        out outFilename,
+                        maxWidth: photoWidth,
+                        maxHeight: photoHeight))
+                    {
+                        photoName = outFilename;
+                    }
+                    else
+                    {
+                        ucColorBox1.Alert("เกิดข้อผิดพลาด", "เกิดข้อผิดพลาดขณะอัพโหลดไฟล์รูปภาพ<br/>" + outErrorMessage, AlertImage: ucColorBox.Alerts.Fail);
+                        return;
+                    }
+                    #endregion
+                }
+                #endregion
+                if (clsSQL.Insert(tableDefault,
+                    new string[,]{
                     {"UserGroupUID",ddlUserGroup.SelectedItem.Value},
                     {"[Username]","'"+txtUsername.Text.SQLQueryFilter()+"'"},
                     {"Password","'"+clsSecurity.Encrypt(txtPassword.Text)+"'"},
@@ -321,17 +323,23 @@ public partial class Management_UserManage : System.Web.UI.Page
                     {"MWhen",functionGetDate},
                     {"Sort",clsSQL.CodeFilter(txtSort.Text)},
                     {"StatusFlag","'" + (cbActive.Checked ? "A" : "I") + "'"}
-                }, new string[,] { { } },
-                out outSQL))
-            {
-                ucColorBox1.ReloadParent();
+                    }, new string[,] { { } },
+                    out outSQL))
+                {
+                    ucColorBox1.ReloadParent();
+                }
+                else
+                {
+                    ucColorBox1.Alert("เกิดข้อผิดพลาดขณะบันทึกข้อมูล<br/>", outSQL, AlertImage: ucColorBox.Alerts.Fail);
+                }
             }
-            else
-            {
-                ucColorBox1.Alert("เกิดข้อผิดพลาดขณะบันทึกข้อมูล<br/>", outSQL, AlertImage: ucColorBox.Alerts.Fail);
-            }
+            #endregion
         }
-        #endregion
+        catch(Exception ex)
+        {
+            lblSQL.Text = "<div style='color:red;'>เกิดข้อผิดพลาด : " + ex.Message + "</div>";
+            lblSQL.Focus();
+        }
         #endregion
     }
     protected void btCancel_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@
 	<section id="Product" class="wrapper style1 special" style="background-color:#FFF100;">
 		<div class="inner">
 			<header class="major" style="padding:0!important;margin:0!important;">
-				<h2 style="font-family:thaisans_neuebold;color:#2E3842;">Product</h2>
+				<h2 style="font-family:thaisans_neuebold;color:#2E3842;">Product / Service</h2>
 				<p style="padding:0;margin:0;color:#A39A01;">
                     <uc1:ucContent runat="server" ID="ucContentProduct" ContentName="Product"/>
 				</p>
@@ -44,6 +44,19 @@
 				<p style="padding:0;margin:0;">ประวัติบริษัท</p>
 			</header>
             <uc1:ucContent runat="server" ID="ucContentCompanyProfile" ContentName="CompanyProfile" />
+		</div>
+	</section>
+    <section id="SendMail" class="wrapper style1 special" style="background-color:#FFF100;">
+		<div class="inner">
+			<header class="major" style="padding:0!important;margin:0!important;">
+				<h2 style="font-family:thaisans_neuebold;color:#2E3842;">SendMail</h2>
+				<p style="padding:0;margin:0;color:#A39A01;">
+                    ส่งงานให้บริษัท
+				</p>
+			</header>
+			<div class="">
+                <iframe src="/SendMail/" style="width:100%;height:350px;"></iframe>
+			</div>
 		</div>
 	</section>
     <section id="ContactUs" class="wrapper style4">

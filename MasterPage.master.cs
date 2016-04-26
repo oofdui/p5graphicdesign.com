@@ -12,35 +12,27 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     #region Variable
     clsSecurity clsSecurity = new clsSecurity();
+    clsLanguage clsLanguage = new clsLanguage();
     #endregion
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
+            if(clsLanguage.LanguageCurrent== "th-TH")
+            {
+                mnHome.Text = "หน้าแรก";
+                mnProductService.Text = "สินค้า / บริการ";
+                mnPortfolio.Text = "ผลงานที่ผ่านมา";
+                mnCompanyProfile.Text = "เกี่ยวกับ P5";
+                mnSendMail.Text = "ส่งไฟล์งาน / ขอใบเสนอราคา";
+                mnContactUs.Text = "ติดต่อ P5";
+            }
+            else
+            {
+
+            }
             setProductGroup();
         }
-    }
-    private void SendMail()
-    {
-        #region MailSender
-        var clsMail = new clsMail();
-        var outMessage = "";
-
-        if (!clsMail.SendByGmail(
-            "GooDesign.in.th@gmail.com",
-            "G00des1gn",
-            System.Configuration.ConfigurationManager.AppSettings["mailAlert"],
-            "Article : มีบทความใหม่ 'xxx'",
-            string.Format("<h1>ส่งบทความออนไลน์ : มีบทความใหม่</h1><div><b>ชื่อบทความ</b> : {0}</div><div><b>ผู้เขียน</b> : {1}</div><div><b>อีเมล์</b> : {2}</div><div><b>เบอร์โทรศัพท์</b> : {3}</div>",
-                ""),
-            out outMessage,
-            "AutoSystem : วารสารบริหารการศึกษาบัวบัณฑิต",
-            System.Configuration.ConfigurationManager.AppSettings["mailCc"], "", "", System.Net.Mail.MailPriority.High))
-        {
-            //ucColorBox1.Alert("พบข้อผิดพลาดขณะส่งเมล์", outMessage, AlertImage: ucColorBox.Alerts.Fail);
-            return;
-        }
-        #endregion
     }
     private void setProductGroup()
     {

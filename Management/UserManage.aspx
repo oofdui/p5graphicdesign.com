@@ -121,7 +121,7 @@
 			            </td>
 			            <td style="text-align:left;padding-left:10px;">
 				            <asp:RadioButtonList ID="rbGender" runat="server" RepeatDirection="Horizontal" CssClass="rbDefault">
-                                <asp:ListItem Value="M">Male</asp:ListItem>
+                                <asp:ListItem Value="M" Selected="True">Male</asp:ListItem>
                                 <asp:ListItem Value="F">Female</asp:ListItem>
 				            </asp:RadioButtonList>
 			            </td>

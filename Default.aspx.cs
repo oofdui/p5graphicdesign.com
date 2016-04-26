@@ -78,7 +78,8 @@ public partial class _Default : System.Web.UI.Page
                 if (i % 4 == 0) portfolioOut += "<br/>";
                 portfolioOut += "<div style='display:inline-block;text-align:center;margin:0 15px;'>";
                 portfolioOut += "<a href='/Portfolio/"+ dt.Rows[i]["UID"].ToString() + "/"+ dt.Rows[i]["Name"].ToString().Trim().Replace(" ", "-").Replace("/", "-").Replace(@"\", "-") + "/' class='cbPortfolio' title='" + dt.Rows[i]["Detail"].ToString() + "'>";
-                portfolioOut += "<img src='"+ dt.Rows[i]["Photo"].ToString() + "' style='border-radius:20px;' title='"+ dt.Rows[i]["Detail"].ToString() + "'/>";
+                //portfolioOut += "<img src='"+ dt.Rows[i]["Photo"].ToString() + "' style='border-radius:20px;' title='"+ dt.Rows[i]["Detail"].ToString() + "'/>";
+                portfolioOut += "<img src='" + dt.Rows[i]["Photo"].ToString() + "' style='b' title='" + dt.Rows[i]["Detail"].ToString() + "'/>";
                 portfolioOut += "<p style='color:#4D4D4D;font-family:thaisans_neueregular;'>"+ dt.Rows[i]["Name"].ToString() + "</p>";
                 portfolioOut += "</a>";
                 portfolioOut += "</div>";

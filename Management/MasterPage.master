@@ -11,6 +11,7 @@
     <link href="/Management/CSS/cssDefault.css" rel="stylesheet" type="text/css" />
     <link href="/Management/CSS/cssCustom.css" rel="stylesheet" type="text/css" />
     <link href="/CSS/cssControl.css" rel="stylesheet" type="text/css" />
+    <link href="../Plugin/Font-Awesome/css/font-awesome.min.css" rel="stylesheet" />
 
     <style type="text/css">
         #dvLogout

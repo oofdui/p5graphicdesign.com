@@ -65,7 +65,8 @@ public partial class Portfolio : System.Web.UI.Page
                 if (i % 4 == 0) lblContent.Text += "<br/>";
                 lblContent.Text += "<div style='display:inline-block;text-align:center;margin:10px 15px;'>";
                 lblContent.Text += "<a href='" + dt.Rows[i]["Photo"].ToString() + "' class='cbPhoto' title='" + dt.Rows[i]["Detail"].ToString() + "'>";
-                lblContent.Text += "<img src='" + dt.Rows[i]["PhotoPreview"].ToString() + "' style='border-radius:20px;' title='" + dt.Rows[i]["Detail"].ToString() + "'/>";
+                //lblContent.Text += "<img src='" + dt.Rows[i]["PhotoPreview"].ToString() + "' style='border-radius:20px;' title='" + dt.Rows[i]["Detail"].ToString() + "'/>";
+                lblContent.Text += "<img src='" + dt.Rows[i]["PhotoPreview"].ToString() + "' style='' title='" + dt.Rows[i]["Detail"].ToString() + "'/>";
                 //lblContent.Text += "<p style='color:#4D4D4D;font-family:thaisans_neueregular;'>" + dt.Rows[i]["Name"].ToString() + "</p>";
                 lblContent.Text += "</a>";
                 lblContent.Text += "</div>";

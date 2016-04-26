@@ -69,5 +69,10 @@
                 <img src="Images/icUser.png" alt="User" title="User" width="32px"/>  User Manage
             </a>
         </div>
+        <div class="Menu">
+            <a href="Job.aspx">
+                <img src="Images/icPhotoGallery.png" alt="Job" title="Job" width="32px"/>  Job Manage
+            </a>
+        </div>
     </fieldset>
 </asp:Content>
