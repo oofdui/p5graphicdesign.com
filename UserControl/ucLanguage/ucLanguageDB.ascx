@@ -18,7 +18,7 @@
 </asp:DropDownList>
 <asp:Label ID="lblAlert" runat="server" Font-Size="10pt" ForeColor="Red" />
 <script type="text/javascript">
-    $(document).ready(function (e) {
+    <%--$(document).ready(function (e) {
         $("#<%=ddlLanguage.ClientID %>").msDropdown({
             mainCSS: "dd",
             visibleRows: 7,
@@ -27,5 +27,5 @@
             enableAutoFilter:true,
             roundedBorder: true 
         });
-    });
+    });--%>
 </script>

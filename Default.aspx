@@ -49,13 +49,13 @@
     <section id="SendMail" class="wrapper style1 special" style="background-color:#FFF100;">
 		<div class="inner">
 			<header class="major" style="padding:0!important;margin:0!important;">
-				<h2 style="font-family:thaisans_neuebold;color:#2E3842;">SendMail</h2>
+				<h2 style="font-family:thaisans_neuebold;color:#2E3842;">Submit File / Inquiry</h2>
 				<p style="padding:0;margin:0;color:#A39A01;">
                     ส่งงานให้บริษัท
 				</p>
 			</header>
 			<div class="">
-                <iframe src="/SendMail/" style="width:100%;height:350px;"></iframe>
+                <iframe src="/SendMail/" style="width:100%;height:380px;"></iframe>
 			</div>
 		</div>
 	</section>

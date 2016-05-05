@@ -23,7 +23,7 @@ public static class clsGlobal
         get { return _applicationVersion; }
         set { _applicationVersion = value; }
     }
-    private static clsSQL.DBType _dbType=clsSQL.DBType.MySQL;
+    private static clsSQL.DBType _dbType=clsSQL.DBType.SQLServer;
     public static clsSQL.DBType dbType
     {
         get { return _dbType; }

@@ -43,9 +43,9 @@ public partial class Product : System.Web.UI.Page
         strSQL.Append("ProductGroup ");
         strSQL.Append("WHERE ");
         strSQL.Append("StatusFlag='A' ");
-        strSQL.Append("AND UID=?UID;");
+        strSQL.Append("AND UID=@UID;");
         #endregion
-        dt = clsSQL.Bind(strSQL.ToString(), new string[,] { { "?UID", uid } });
+        dt = clsSQL.Bind(strSQL.ToString(), new string[,] { { "@UID", uid } });
         if (dt != null && dt.Rows.Count > 0)
         {
             productIcon = dt.Rows[0]["Icon"].ToString();

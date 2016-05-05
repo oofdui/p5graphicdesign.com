@@ -205,7 +205,7 @@ public class clsSecurity
         set { _loginUserAuthority = value; }
     }
 
-    private clsSQL.DBType _dbType=clsSQL.DBType.MySQL;
+    private clsSQL.DBType _dbType=clsSQL.DBType.SQLServer;
     public clsSQL.DBType DBType
     {
         get { return _dbType; }
@@ -322,7 +322,7 @@ public class clsSecurity
                 strSQL.Append((_dbType==clsSQL.DBType.MySQL?"IFNULL":"ISNULL")+"(B.Authority,'') AS GroupAuthority,");
                 strSQL.Append((_dbType==clsSQL.DBType.MySQL?"IFNULL":"ISNULL")+"(A.Authority,'') AS UserAuthority ");
                 strSQL.Append("FROM ");
-                strSQL.Append("User A ");
+                strSQL.Append("[User] A ");
                 strSQL.Append("INNER JOIN UserGroup B ");
                 strSQL.Append("ON A.UserGroupUID=B.UID AND B.StatusFlag='A' ");
                 strSQL.Append("WHERE ");
@@ -415,7 +415,7 @@ public class clsSecurity
         strSQL.Append((_dbType==clsSQL.DBType.MySQL?"IFNULL":"ISNULL")+"(B.Authority,'') AS GroupAuthority,");
         strSQL.Append((_dbType==clsSQL.DBType.MySQL?"IFNULL":"ISNULL")+"(A.Authority,'') AS UserAuthority ");
         strSQL.Append("FROM ");
-        strSQL.Append("User A ");
+        strSQL.Append("[User] A ");
         strSQL.Append("INNER JOIN UserGroup B ");
         strSQL.Append("ON A.UserGroupUID=B.UID AND B.StatusFlag='A' ");
         strSQL.Append("WHERE ");

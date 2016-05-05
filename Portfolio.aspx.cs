@@ -44,10 +44,10 @@ public partial class Portfolio : System.Web.UI.Page
         strSQL.Append("LEFT JOIN photogallery B ON A.UID = B.PhotoGalleryGroupUID AND B.StatusFlag = 'A' ");
         strSQL.Append("WHERE ");
         strSQL.Append("A.StatusFlag = 'A' ");
-        strSQL.Append("AND A.UID=?UID ");
+        strSQL.Append("AND A.UID=@UID ");
         strSQL.Append("ORDER BY B.Sort;");
         #endregion
-        dt = clsSQL.Bind(strSQL.ToString(), new string[,] { { "?UID", uid } });
+        dt = clsSQL.Bind(strSQL.ToString(), new string[,] { { "@UID", uid } });
         if (dt != null && dt.Rows.Count > 0)
         {
             portfolioIcon = dt.Rows[0]["GroupPhoto"].ToString();

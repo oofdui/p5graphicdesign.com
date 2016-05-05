@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="/CSS/cssDefault.css"/>
     <link href="/Plugin/ColorBox/colorbox.css" rel="stylesheet" />
     <link href="/CSS/cssControl.css" rel="stylesheet" />
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/Plugin/ColorBox/jquery.colorbox-min.js"></script>
     <asp:ContentPlaceHolder id="cphHeader" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -44,7 +46,7 @@
                                     <asp:Label ID="menuProductGroup" runat="server" meta:resourcekey="menuProductGroupResource1" />
                                     <li><a href="#Portfolio" class="more scrolly"><asp:Label ID="mnPortfolio" Text="Portfolio" runat="server" meta:resourcekey="mnPortfolioResource1"/></a></li>
                                     <li><a href="#CompanyProfile" class="more scrolly"><asp:Label ID="mnCompanyProfile" Text="Company Profile" runat="server" meta:resourcekey="mnCompanyProfileResource1"/></a></li>
-								    <li><a href="#SendMail" class="more scrolly"><asp:Label ID="mnSendMail" Text="Send Mail" runat="server" meta:resourcekey="mnSendMailResource1"/></a></li>
+								    <li><a href="#SendMail" class="more scrolly"><asp:Label ID="mnSendMail" Text="Submit File / Inquiry" runat="server" meta:resourcekey="mnSendMailResource1"/></a></li>
 								    <li><a href="#ContactUs" class="more scrolly"><asp:Label ID="mnContactUs" Text="Contact us" runat="server" meta:resourcekey="mnContactUsResource1"/></a></li>
 							    </ul>
 						    </div>
@@ -67,8 +69,6 @@
 			    </ul>
 		    </footer>
 	    </div>
-        <script src="/assets/js/jquery.min.js"></script>
-        <script src="/Plugin/ColorBox/jquery.colorbox-min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $(".cbDefault").colorbox({ 

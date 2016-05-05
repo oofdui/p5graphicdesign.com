@@ -1,4 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SendMail.aspx.cs" Inherits="SendMail" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SendMail.aspx.cs" Inherits="SendMail" ValidateRequest="false"%>
+
+<%@ Register Src="~/UserControl/ucTextEditor/ucTextEditor.ascx" TagPrefix="uc1" TagName="ucTextEditor" %>
+
 
 <!DOCTYPE html>
 
@@ -118,7 +121,8 @@
                         รายละเอียด
                     </td>
                     <td>
-                        <asp:TextBox ID="txtDetail" runat="server" TextMode="MultiLine" Width="90%" Rows="5"/>
+                        <%--<asp:TextBox ID="txtDetail" runat="server" TextMode="MultiLine" Width="90%" Rows="5"/>--%>
+                        <uc1:ucTextEditor runat="server" ID="txtDetail" Row="3"/>
                     </td>
                 </tr>
                 <tr>
