@@ -34,8 +34,8 @@ public partial class SendMail : System.Web.UI.Page
             strSQL.Append("'" + txtContactPhone.Text.SQLQueryFilter() + "',");
             strSQL.Append("'" + txtContactEmail.Text.SQLQueryFilter() + "',");
             strSQL.Append("'" + txtLocation.Text.SQLQueryFilter() + "',");
-            strSQL.Append("NOW(),");
-            strSQL.Append("NOW()");
+            strSQL.Append("GETDATE(),");
+            strSQL.Append("GETDATE()");
             strSQL.Append(");");
             #endregion
             if (clsSQL.Execute(strSQL.ToString()))

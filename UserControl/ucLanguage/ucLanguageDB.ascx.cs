@@ -64,14 +64,17 @@ public partial class ucLanguageDB : System.Web.UI.UserControl
                 if (cookie.Value == "th-TH")
                 {
                     ddlLanguage.SelectedValue = "th-TH";
+                    ddlLanguage2.SelectedValue = "th-TH";
                 }
                 else if (cookie.Value == "en-US")
                 {
                     ddlLanguage.SelectedValue = "en-US";
+                    ddlLanguage2.SelectedValue = "en-US";
                 }
                 else
                 {
                     ddlLanguage.SelectedValue = _languageDefault;
+                    ddlLanguage2.SelectedValue = _languageDefault;
                 }
             }
             #endregion
@@ -80,22 +83,36 @@ public partial class ucLanguageDB : System.Web.UI.UserControl
 
     private void BindLanguage()
     {
-        ListItem li = new ListItem();
-        ddlLanguage.Width = Unit.Parse(_width);
+        //ListItem li = new ListItem();
+        //ddlLanguage.Width = Unit.Parse(_width);
 
-        li = new ListItem();
-        li.Value = "th-TH";
-        li.Text = "ภาษาไทย";
-        li.Attributes.Add("data-image", "/Images/icLangTH.png");
+        //li = new ListItem();
+        //li.Value = "th-TH";
+        //if(Request.Browser.ScreenPixelsWidth > 736)
+        //{
+        //    li.Text = "ภาษาไทย";
+        //}
+        //else
+        //{
+        //    li.Text = "TH";
+        //}
+        //li.Attributes.Add("data-image", "/Images/icLangTH.png");
 
-        ddlLanguage.Items.Add(li);
+        //ddlLanguage.Items.Add(li);
 
-        li = new ListItem();
-        li.Value = "en-US";
-        li.Text = "English";
-        li.Attributes.Add("data-image", "/Images/icLangEN.png");
+        //li = new ListItem();
+        //li.Value = "en-US";
+        //if (Request.Browser.ScreenPixelsWidth > 736)
+        //{
+        //    li.Text = "English";
+        //}
+        //else
+        //{
+        //    li.Text = "EN";
+        //}
+        //li.Attributes.Add("data-image", "/Images/icLangEN.png");
 
-        ddlLanguage.Items.Add(li);
+        //ddlLanguage.Items.Add(li);
     }
 
     protected void ddlLanguage_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,6 +121,17 @@ public partial class ucLanguageDB : System.Web.UI.UserControl
         {
             HttpCookie cookie = new HttpCookie(_cookieName);
             cookie.Value = ddlLanguage.SelectedItem.Value;
+            Response.SetCookie(cookie);
+            Response.Redirect(Request.RawUrl);
+        }
+    }
+
+    protected void ddlLanguage2_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (ddlLanguage2.SelectedItem.Value != "null")
+        {
+            HttpCookie cookie = new HttpCookie(_cookieName);
+            cookie.Value = ddlLanguage2.SelectedItem.Value;
             Response.SetCookie(cookie);
             Response.Redirect(Request.RawUrl);
         }

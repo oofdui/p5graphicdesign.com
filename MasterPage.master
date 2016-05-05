@@ -9,9 +9,10 @@
 <head runat="server">
     <title>P 5 Graphic</title>
     <meta charset="utf-8" />
+    <link href="/favicon.ico" rel="shortcut icon"/>
     <meta name="description" content="P 5 Graphic" /> 
     <meta name="keywords" content="GraphicDesign,Design,Graphic,P5,Poster,โปสเตอร์,ออกแบบกราฟฟิค"/>
-    <meta name="Copyright" content="http://www.p5graphic.com" /> 
+    <meta name="Copyright" content="http://www.p5graphicdesign.com" /> 
     <meta name="audience" content="all" /> 
     <meta name="robots" content="all, index, follow" /> 
     <meta name="revisit-after" content="7 days" /> 
@@ -26,6 +27,15 @@
     <link href="/CSS/cssControl.css" rel="stylesheet" />
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/Plugin/ColorBox/jquery.colorbox-min.js"></script>
+    <style type="text/css">
+        #nav2{margin-right:120px;}
+        @media screen and (max-width: 736px) 
+        {
+            #nav2{
+                margin-right:50px;
+            }
+        }
+    </style>
     <asp:ContentPlaceHolder id="cphHeader" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -53,7 +63,7 @@
 					    </li>
 				    </ul>
 			    </nav>
-                <nav id="nav2" style="margin-right:120px;"><uc1:ucLanguageDB runat="server" id="ucLanguageDB" /></nav>
+                <nav id="nav2" style=""><uc1:ucLanguageDB runat="server" id="ucLanguageDB" /></nav>
 		    </header>
             <asp:ContentPlaceHolder id="cphBody" runat="server">
         
@@ -63,6 +73,12 @@
 			    <%--<ul class="icons">
 				    <li><a href="https://www.facebook.com/profile.php?id=100008755424323" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 			    </ul>--%>
+                <div>
+                    <a href="https://www.facebook.com/profile.php?id=100008755424323">
+                        <img src="/Images/icFacebook.png" style="padding-left:5px;"/>
+                    </a>
+                    <img src="/Images/icLine.png" title="Line ID : porjaip5" style="padding-left:5px;"/>
+                </div>
 			    <ul class="copyright">
                     <li>&copy; P5GraphicDesign</li>
 				    <!--<li>&copy; GooDesign.in.th</li><li>Design: <a href="http://www.goodesign.in.th">goodesign.in.th</a></li>-->
