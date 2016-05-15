@@ -68,7 +68,7 @@ public partial class _Default : System.Web.UI.Page
         strSQL.Append("WHERE ");
         strSQL.Append("StatusFlag='A' ");
         strSQL.Append("ORDER BY ");
-        strSQL.Append("MWhen DESC;");
+        strSQL.Append("Sort ASC;");
         #endregion
         dt = clsSQL.Bind(strSQL.ToString());
         if(dt!=null && dt.Rows.Count > 0)

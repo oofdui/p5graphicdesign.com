@@ -45,11 +45,13 @@ public partial class SendMail : System.Web.UI.Page
                 var outMessage = "";
 
                 //Send to Admin
-                if (!clsMail.SendByGmail(
+                try
+                {
+                    if (!clsMail.SendByGmail(
                     "goodesign.vps@gmail.com",
                     "G00des1gn",
                     System.Configuration.ConfigurationManager.AppSettings["mailTo"],
-                    "P5GraphicDesign : มีใบงานใหม่ '"+txtName.Text.SQLQueryFilter()+"'",
+                    "P5GraphicDesign : มีใบงานใหม่ '" + txtName.Text.SQLQueryFilter() + "'",
                     string.Format("<h1>มีใบงานใหม่ : {0}</h1><div><b>จาก</b> : {1}</div><div><b>เบอร์โทร</b> : {2}</div><div><b>รายละเอียด</b> : {3}</div><hr/><a href='http://www.p5graphicdesign.com/Management/Job.aspx'>คลิกที่นี่เพื่อดูข้อมูล</a>",
                         txtName.Text.SQLQueryFilter(),
                         txtContactName.Text.SQLQueryFilter(),
@@ -58,15 +60,19 @@ public partial class SendMail : System.Web.UI.Page
                     out outMessage,
                     "P5GraphicDesign : มีใบงานใหม่ '" + txtName.Text.SQLQueryFilter() + "'",
                     "off.dui@gmail.com", "", "", System.Net.Mail.MailPriority.High))
-                {
-                    //Response.Write(outMessage);
-                    //ucColorBox1.Alert("พบข้อผิดพลาดขณะส่งเมล์", outMessage, AlertImage: ucColorBox.Alerts.Fail);
-                    //return;
+                    {
+                        Response.Write("Send to Admin : " + outMessage);
+                        //ucColorBox1.Alert("พบข้อผิดพลาดขณะส่งเมล์", outMessage, AlertImage: ucColorBox.Alerts.Fail);
+                        return;
+                    }
                 }
-                if (txtContactEmail.Text.Trim() != "")
+                catch(Exception exMailToAdmin) { Response.Write(exMailToAdmin.Message); }
+                if (txtContactEmail.Text.Trim() != "" && txtContactEmail.Text.Contains("@") && txtContactEmail.Text.Contains("."))
                 {
-                    //Send to Admin
-                    if (!clsMail.SendByGmail(
+                    //Send to Customer
+                    try
+                    {
+                        if (!clsMail.SendByGmail(
                         "goodesign.vps@gmail.com",
                         "G00des1gn",
                         txtContactEmail.Text.Trim(),
@@ -79,11 +85,13 @@ public partial class SendMail : System.Web.UI.Page
                         out outMessage,
                         "P5GraphicDesign : ได้รับใบงาน '" + txtName.Text.SQLQueryFilter() + "' ของคุณแล้ว",
                         "", "", "", System.Net.Mail.MailPriority.High))
-                    {
-                        //Response.Write(outMessage);
-                        //ucColorBox1.Alert("พบข้อผิดพลาดขณะส่งเมล์", outMessage, AlertImage: ucColorBox.Alerts.Fail);
-                        //return;
+                        {
+                            Response.Write(outMessage);
+                            //ucColorBox1.Alert("พบข้อผิดพลาดขณะส่งเมล์", outMessage, AlertImage: ucColorBox.Alerts.Fail);
+                            return;
+                        }
                     }
+                    catch(Exception exMailToCustomer) { Response.Write("Send to Customer : " + exMailToCustomer.Message); }
                 }
                 #endregion
                 txtName.Text = "";txtDetail.Text = "";txtContactName.Text = "";txtContactPhone.Text = "";txtLocation.Text = "";hidFileName.Value = "";

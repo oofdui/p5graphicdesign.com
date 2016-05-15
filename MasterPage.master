@@ -52,9 +52,9 @@
 						    <div id="menu">
 							    <ul>
 								    <li><a href="/"><asp:Label ID="mnHome" Text="Home" runat="server" meta:resourcekey="mnHomeResource1"/></a></li>
+                                    <li><a href="#Portfolio" class="more scrolly"><asp:Label ID="mnPortfolio" Text="Portfolio" runat="server" meta:resourcekey="mnPortfolioResource1"/></a></li>
                                     <li><a href="#Product" class="more scrolly"><asp:Label ID="mnProductService" Text="Product / Service" runat="server" meta:resourcekey="mnProductServiceResource1"/></a></li>
                                     <asp:Label ID="menuProductGroup" runat="server" meta:resourcekey="menuProductGroupResource1" />
-                                    <li><a href="#Portfolio" class="more scrolly"><asp:Label ID="mnPortfolio" Text="Portfolio" runat="server" meta:resourcekey="mnPortfolioResource1"/></a></li>
                                     <li><a href="#CompanyProfile" class="more scrolly"><asp:Label ID="mnCompanyProfile" Text="Company Profile" runat="server" meta:resourcekey="mnCompanyProfileResource1"/></a></li>
 								    <li><a href="#SendMail" class="more scrolly"><asp:Label ID="mnSendMail" Text="Submit File / Inquiry" runat="server" meta:resourcekey="mnSendMailResource1"/></a></li>
 								    <li><a href="#ContactUs" class="more scrolly"><asp:Label ID="mnContactUs" Text="Contact us" runat="server" meta:resourcekey="mnContactUsResource1"/></a></li>

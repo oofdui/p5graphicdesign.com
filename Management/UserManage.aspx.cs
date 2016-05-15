@@ -15,7 +15,7 @@ public partial class Management_UserManage : System.Web.UI.Page
     private clsDefault clsDefault = new clsDefault();
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
     private string functionGetDate = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "NOW()" : "GETDATE()");
-    public string tableDefault = "User";
+    public string tableDefault = "[User]";
     public string webDefault = "User.aspx";
     public string webManage = "UserManage.aspx";
     public string pathUpload = "/Upload/User/";

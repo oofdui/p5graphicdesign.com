@@ -40,16 +40,30 @@
                         processData: false,
                         success: function (result) {
                             progressbarLabel.text('Complete');
-                            progressbarDiv.fadeOut(2000);
+                            //progressbarDiv.fadeOut(2000);
                             $('#<%=hidFileName.ClientID%>').val(result);
+                            $("#FileUpload1").val("");
                         },
                         error: function (err) {
                             alert("Error : " + err);
                             alert(err.statusText);
+                        },
+                        xhr: function () {
+                            // get the native XmlHttpRequest object
+                            var xhr = $.ajaxSettings.xhr();
+                            // set the onprogress event handler
+                            xhr.upload.onprogress = function (evt) {
+                                //alert(evt.loaded / evt.total * 100)
+                                progressbarLabel.text((evt.loaded / evt.total * 100 | 0) + " % Completed");
+                            };
+                            // set the onload event handler
+                            xhr.upload.onload = function () { /*alert("Done");*/ };
+                            // return the customized object
+                            return xhr;
                         }
                     });
 
-                    progressbarLabel.text('Uploading...');
+                    //progressbarLabel.text('Uploading...');
                     progressbarDiv.progressbar({
                         value: false
                     }).fadeIn(500);
@@ -96,6 +110,7 @@
                     <td>
                         <asp:TextBox ID="txtContactEmail" runat="server" MaxLength="200"/>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtContactEmail" Display="Dynamic" ErrorMessage="โปรดกรอกอีเมล์" ForeColor="Red" SetFocusOnError="True" ValidationGroup="vgSendMail"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtContactEmail" ErrorMessage="E-Mail ผิดรูปแบบ" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red" SetFocusOnError="True" ValidationGroup="vgSendMail"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -127,7 +142,7 @@
                 </tr>
                 <tr>
                     <td style="">
-                        สถานที่
+                        สถานที่จัดส่งสินค้า
                     </td>
                     <td>
                         <asp:TextBox ID="txtLocation" runat="server" MaxLength="200"/>

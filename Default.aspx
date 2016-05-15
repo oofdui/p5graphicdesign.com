@@ -13,6 +13,17 @@
 		</div>
 		<a href="#Product" class="more scrolly"></a>
 	</section>
+    <section id="Portfolio" class="wrapper style3 special" style="background-color:#FAFAFA;color:#444;">
+		<div class="inner">
+			<header class="major" style="padding:0!important;margin:0!important;">
+				<h2 style="color:#FFC90E;">Portfolio</h2>
+				<p>ผลงานที่ผ่านมา</p>
+			</header>
+            <div style="margin:0!important;padding:0!important;">
+                <%=portfolioOut %>
+            </div>
+		</div>
+	</section>
 	<section id="Product" class="wrapper style1 special" style="background-color:#FFF100;">
 		<div class="inner">
 			<header class="major" style="padding:0!important;margin:0!important;">
@@ -24,17 +35,6 @@
 			<ul class="icons major" style="padding:0!important;margin:0!important;">
 				<asp:Label ID="lblProduct" runat="server" />
 			</ul>
-		</div>
-	</section>
-    <section id="Portfolio" class="wrapper style3 special" style="background-color:#FAFAFA;color:#444;">
-		<div class="inner">
-			<header class="major" style="padding:0!important;margin:0!important;">
-				<h2 style="color:#FFC90E;">Portfolio</h2>
-				<p>ผลงานที่ผ่านมา</p>
-			</header>
-            <div style="margin:0!important;padding:0!important;">
-                <%=portfolioOut %>
-            </div>
 		</div>
 	</section>
     <section id="CompanyProfile" class="wrapper style4" style="background-color:#797979;">

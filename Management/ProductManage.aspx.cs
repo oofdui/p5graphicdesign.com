@@ -148,7 +148,7 @@ public partial class Management_ProductManage : System.Web.UI.Page
         #region Insert
         else
         {
-            id = int.Parse(clsSQL.Return("SELECT IFNULL(MAX(UID),0)+1 FROM " + tableDefault));
+            id = int.Parse(clsSQL.Return("SELECT ISNULL(MAX(UID),0)+1 FROM " + tableDefault));
             #region Photo Upload
             if (fuPhoto.HasFile)
             {
