@@ -46,6 +46,7 @@ public partial class Management_Product : System.Web.UI.Page
         strSQL.Append("A.Name,");
         strSQL.Append("A.Detail,");
         strSQL.Append("A.MWhen,");
+        strSQL.Append("A.Sort,");
         strSQL.Append("A.StatusFlag ");
         strSQL.Append("FROM ");
         strSQL.Append(tableDefault + " A ");
@@ -103,12 +104,14 @@ public partial class Management_Product : System.Web.UI.Page
             #endregion
             Label lblDGID = (Label)gvDefault.Rows[i].FindControl("lblDGID");
             CheckBox cbDGActive = (CheckBox)gvDefault.Rows[i].FindControl("cbDGActive");
+            TextBox txtDGSort = (TextBox)gvDefault.Rows[i].FindControl("txtDGSort");
             if (lblDGID != null && cbDGActive != null)
             {
                 #region SQL Query
                 strSQL.Append("UPDATE ");
                 strSQL.Append(tableDefault + " ");
                 strSQL.Append("SET ");
+                strSQL.Append("Sort=" + clsSQL.CodeFilter(txtDGSort.Text) + ",");
                 strSQL.Append("StatusFlag='" + (cbDGActive.Checked ? "A" : "I") + "' ");
                 strSQL.Append("WHERE ");
                 strSQL.Append("UID=" + lblDGID.Text);

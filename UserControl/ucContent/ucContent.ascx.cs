@@ -87,7 +87,7 @@ public partial class ucContent : System.Web.UI.UserControl
         strSQL.Append("Content.UID,");
         strSQL.Append("Content.Name,");
         strSQL.Append("Content.Detail,");
-        strSQL.Append("Content.Content ");
+        strSQL.Append("Content.Content,Content.ContentEN ");
         strSQL.Append("FROM ");
         strSQL.Append("Content ");
         strSQL.Append("WHERE ");
@@ -101,7 +101,15 @@ public partial class ucContent : System.Web.UI.UserControl
             #region Default Builder
             if (dt.Rows[0]["Content"] != DBNull.Value)
             {
-                strScript.Append(dt.Rows[0]["Content"].ToString());
+                var clsLanguage = new clsLanguage();
+                if (clsLanguage.LanguageCurrent == "th-TH")
+                {
+                    strScript.Append(dt.Rows[0]["Content"].ToString());
+                }
+                else
+                {
+                    strScript.Append((dt.Rows[0]["ContentEN"].ToString()!=""? dt.Rows[0]["ContentEN"].ToString(): dt.Rows[0]["Content"].ToString()));
+                }
             }
             #endregion
             #region Admin Builder

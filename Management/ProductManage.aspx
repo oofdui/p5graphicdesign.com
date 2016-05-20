@@ -10,6 +10,8 @@
     <title>Manage</title>
     <link href="/Management/CSS/cssDefault.css" rel="stylesheet" type="text/css" />
     <link href="/Management/CSS/cssControl.css" rel="stylesheet" type="text/css" />
+    <link href="/Plugin/TabbedContent/tabcontent.css" rel="stylesheet" />
+    <script src="/Plugin/TabbedContent/tabcontent.js" type="text/javascript"></script>
 </head>
 <body style="background-color:#FFF;">
     <form id="form1" runat="server">
@@ -50,29 +52,73 @@
 			            </td>
 		            </tr>
                     <tr class="GridViewItemNormal">
-                        <td>
-				            ชื่อ
-			            </td>
-			            <td style="text-align:left;padding-left:10px;">
-				            <asp:TextBox ID="txtName" runat="server" MaxLength="100" placeholder="ชื่ออ้างอิง"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
-                                ControlToValidate="txtName" CssClass="validDefault" Display="Dynamic" 
-                                ErrorMessage="กรุณากรอก" ValidationGroup="vgSubmit" 
-                                SetFocusOnError="True"></asp:RequiredFieldValidator>
-			            </td>
-		            </tr>
-                    <tr class="GridViewItemNormal">
-                        <td>
-                            คำอธิบาย</td>
-                        <td style="text-align:left;padding-left:10px;">
-                            <asp:TextBox ID="txtDetail" runat="server" MaxLength="500" width="99%" placeholder="คำอธิบาย"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr class="GridViewItemNormal">
-                        <td>
-                            รายละเอียด</td>
-                        <td style="text-align:left;padding-left:10px;">
-                            <uc3:ucTextEditorFull ID="ucContent" runat="server" Width="100%"/>
+                        <td colspan="2">
+                            <ul class="tabs">
+                                <li><a href="#th">ภาษาไทย</a></li>
+                                <li><a href="#en">English</a></li>
+                            </ul>
+                            <div class="tabcontents">
+                                <div id="th">
+                                    <table>
+                                        <tr class="GridViewItemNormal">
+                                            <td style="width:145px;">
+				                                ชื่อ
+			                                </td>
+			                                <td style="text-align:left;padding-left:10px;">
+				                                <asp:TextBox ID="txtName" runat="server" MaxLength="100" placeholder="ชื่ออ้างอิง"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                                                    ControlToValidate="txtName" CssClass="validDefault" Display="Dynamic" 
+                                                    ErrorMessage="กรุณากรอก" ValidationGroup="vgSubmit" 
+                                                    SetFocusOnError="True"></asp:RequiredFieldValidator>
+			                                </td>
+		                                </tr>
+                                        <tr class="GridViewItemNormal">
+                                            <td>
+                                                คำอธิบาย</td>
+                                            <td style="text-align:left;padding-left:10px;">
+                                                <asp:TextBox ID="txtDetail" runat="server" MaxLength="500" width="99%" placeholder="คำอธิบาย"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr class="GridViewItemNormal">
+                                            <td>
+                                                รายละเอียด</td>
+                                            <td style="text-align:left;padding-left:10px;">
+                                                <uc3:ucTextEditorFull ID="ucContent" runat="server" Width="100%"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="en">
+                                    <table>
+                                        <tr class="GridViewItemNormal">
+                                            <td style="width:145px;">
+				                                ชื่อ
+			                                </td>
+			                                <td style="text-align:left;padding-left:10px;">
+				                                <asp:TextBox ID="txtNameEN" runat="server" MaxLength="100" placeholder="ชื่ออ้างอิง"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                                                    ControlToValidate="txtNameEN" CssClass="validDefault" Display="Dynamic" 
+                                                    ErrorMessage="กรุณากรอก" ValidationGroup="vgSubmit" 
+                                                    SetFocusOnError="True"></asp:RequiredFieldValidator>
+			                                </td>
+		                                </tr>
+                                        <tr class="GridViewItemNormal">
+                                            <td>
+                                                คำอธิบาย</td>
+                                            <td style="text-align:left;padding-left:10px;">
+                                                <asp:TextBox ID="txtDetailEN" runat="server" MaxLength="500" width="99%" placeholder="คำอธิบาย"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr class="GridViewItemNormal">
+                                            <td>
+                                                รายละเอียด</td>
+                                            <td style="text-align:left;padding-left:10px;">
+                                                <uc3:ucTextEditorFull ID="ucContentEN" runat="server" Width="100%"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr class="GridViewItemNormal">

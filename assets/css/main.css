@@ -3377,7 +3377,7 @@
 			}
 
 /* Banner */
-
+    #banner img{width:1024px;}
 	#banner {
 		display: -moz-flex;
 		display: -webkit-flex;

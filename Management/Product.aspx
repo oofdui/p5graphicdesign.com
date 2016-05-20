@@ -54,6 +54,9 @@
                         <th class="GridViewSubHeader" style="width:100px;">
 				            วันเวลา
 			            </th>
+                        <th class="GridViewSubHeader" style="width:60px;">
+				            ลำดับ
+			            </th>
                         <th class="GridViewSubHeader" style="width:30px;">
 				                    
 			            </th>
@@ -85,6 +88,9 @@
 				            <%#DateTime.Parse(Eval("MWhen").ToString()).ToString("dd/MM/yyyy HH:mm") %>
 			            </td>
                         <td class="GridViewItem">
+                            <asp:TextBox ID="txtDGSort" runat="server" Width="45px" CssClass="txtCenter" Text='<%#Eval("Sort")%>'></asp:TextBox>
+                        </td>
+                        <td class="GridViewItem">
                             <a href="/Management/<%=webManage %>?id=<%#Eval("UID") %>&command=edit" title="ดูข้อมูล" class="cbIFrame">
                                 <div class="Icon16 Edit"></div>
                             </a>
@@ -103,6 +109,9 @@
 			            </th>
                         <th class="GridViewSubHeader">
 				            วันเวลา
+			            </th>
+                        <th class="GridViewSubHeader">
+				            ลำดับ
 			            </th>
                         <th class="GridViewSubHeader">
 				                    

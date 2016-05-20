@@ -10,6 +10,8 @@
     <title>Manage</title>
     <link href="/Management/CSS/cssDefault.css" rel="stylesheet" type="text/css" />
     <link href="/Management/CSS/cssControl.css" rel="stylesheet" type="text/css" />
+    <link href="/Plugin/TabbedContent/tabcontent.css" rel="stylesheet" />
+    <script src="/Plugin/TabbedContent/tabcontent.js" type="text/javascript"></script>
 </head>
 <body style="background-color:#FFF;">
     <form id="form1" runat="server">
@@ -54,7 +56,18 @@
                         <td>
                             รายละเอียด</td>
                         <td style="text-align:left;padding-left:10px;">
-                            <uc3:ucTextEditorFull ID="ucContent" runat="server" Width="100%"/>
+                            <ul class="tabs">
+                                <li><a href="#th">ภาษาไทย</a></li>
+                                <li><a href="#en">English</a></li>
+                            </ul>
+                            <div class="tabcontents">
+                                <div id="th">
+                                    <uc3:ucTextEditorFull ID="ucContent" runat="server" Width="100%"/>
+                                </div>
+                                <div id="en">
+                                    <uc3:ucTextEditorFull ID="ucContentEN" runat="server" Width="100%"/>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr class="GridViewItemNormal">

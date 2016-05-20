@@ -56,9 +56,9 @@ public partial class Management_ProductManage : System.Web.UI.Page
         #region Procedure
         #region SQL Query
         strSQL.Append("SELECT ");
-        strSQL.Append("A.Name,");
-        strSQL.Append("A.Detail,");
-        strSQL.Append("A.Content,");
+        strSQL.Append("A.Name,A.NameEN,");
+        strSQL.Append("A.Detail,A.DetailEN,");
+        strSQL.Append("A.Content,A.ContentEN,");
         strSQL.Append("A.Sort,");
         strSQL.Append("A.StatusFlag ");
         strSQL.Append("FROM ");
@@ -69,9 +69,14 @@ public partial class Management_ProductManage : System.Web.UI.Page
         dt = clsSQL.Bind(strSQL.ToString(), new string[,] { { parameterChar + "ID", id } });
         if (dt != null && dt.Rows.Count > 0)
         {
+            vdPhoto.Enabled = false;
+            var clsLanguage = new clsLanguage();
             txtName.Text = dt.Rows[0]["Name"].ToString();
             txtDetail.Text = dt.Rows[0]["Detail"].ToString();
             ucContent.Text = dt.Rows[0]["Content"].ToString();
+            txtNameEN.Text = dt.Rows[0]["NameEN"].ToString();
+            txtDetailEN.Text = dt.Rows[0]["DetailEN"].ToString();
+            ucContentEN.Text = dt.Rows[0]["ContentEN"].ToString();
             txtSort.Text = dt.Rows[0]["Sort"].ToString();
             cbActive.Checked = (dt.Rows[0]["StatusFlag"].ToString() == "A" ? true : false);
         }
@@ -129,6 +134,9 @@ public partial class Management_ProductManage : System.Web.UI.Page
                     {"Name","'"+txtName.Text.SQLQueryFilter()+"'"},
                     {"Detail","'"+txtDetail.Text.SQLQueryFilter()+"'"},
                     {"Content","'" + ucContent.Text.SQLQueryFilter() + "'"},
+                    {"NameEN","'"+txtNameEN.Text.SQLQueryFilter()+"'"},
+                    {"DetailEN","'"+txtDetailEN.Text.SQLQueryFilter()+"'"},
+                    {"ContentEN","'" + ucContentEN.Text.SQLQueryFilter() + "'"},
                     {"MUser",clsSecurity.LoginUID},
                     {"MWhen",functionGetDate},
                     {"Sort",txtSort.Text.SQLQueryFilter()},
@@ -177,6 +185,9 @@ public partial class Management_ProductManage : System.Web.UI.Page
                     {"Name","'" + txtName.Text.SQLQueryFilter() + "'"},
                     {"Detail","'" + txtDetail.Text.SQLQueryFilter() + "'"},
                     {"Content","'" + ucContent.Text.SQLQueryFilter() + "'"},
+                    {"NameEN","'" + txtNameEN.Text.SQLQueryFilter() + "'"},
+                    {"DetailEN","'" + txtDetailEN.Text.SQLQueryFilter() + "'"},
+                    {"ContentEN","'" + ucContentEN.Text.SQLQueryFilter() + "'"},
                     {"CUser",clsSecurity.LoginUID},
                     {"CWhen",functionGetDate},
                     {"MUser",clsSecurity.LoginUID},

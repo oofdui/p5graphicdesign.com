@@ -45,6 +45,11 @@
             จัดการข้อมูลเว็บไซต์
         </legend>
         <div class="Menu">
+            <a href="HomeBackground.aspx">
+                <img src="Images/icPhotoGallery.png" alt="HomeBackground" title="HomeBackground" width="32px"/>  HomeBackground Manage
+            </a>
+        </div>
+        <div class="Menu">
             <a href="Content.aspx">
                 <img src="Images/icContent.png" alt="Content" title="Content" width="32px"/>  Content Manage
             </a>

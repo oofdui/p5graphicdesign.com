@@ -44,7 +44,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         #region Procedure
         #region SQLQuery
         strSQL.Append("SELECT ");
-        strSQL.Append("UID,Name,Detail ");
+        strSQL.Append("UID,Name,Detail,NameEN,DetailEN ");
         strSQL.Append("FROM ");
         strSQL.Append("ProductGroup ");
         strSQL.Append("WHERE ");
@@ -64,7 +64,14 @@ public partial class MasterPage : System.Web.UI.MasterPage
                 //    "/' alt='"+ dt.Rows[i]["Detail"].ToString() + "'>"+ 
                 //    "   - " + dt.Rows[i]["Name"].ToString() + 
                 //    "</a>";
-                menuProductGroup.Text += "<a href='#product' class='more scrolly'>" + "   - " + dt.Rows[i]["Name"].ToString() + "</a>";
+                if (clsLanguage.LanguageCurrent == "th-TH")
+                {
+                    menuProductGroup.Text += "<a href='#product' class='more scrolly'>" + "   - " + dt.Rows[i]["Name"].ToString() + "</a>";
+                }
+                else
+                {
+                    menuProductGroup.Text += "<a href='#product' class='more scrolly'>" + "   - " + (dt.Rows[i]["NameEN"].ToString()!=""? dt.Rows[i]["NameEN"].ToString(): dt.Rows[i]["Name"].ToString()) + "</a>";
+                }
                 menuProductGroup.Text += "</li>";
             }
             menuProductGroup.Text += "</ul></div>";

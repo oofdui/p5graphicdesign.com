@@ -9,7 +9,9 @@
 		<div class="inner">
 			<h2>P 5 Graphic Design</h2>
             <p><img src="/Images/logo2.png" alt="P 5 Graphic Design" style="max-width:100%;height:auto;"/></p>
-			<p>งามพิมพ์ Inkjet Indoor & Outdoor Display อะคริลิค โครงสร้างสำเร็จรูป</p>
+			<p>
+                <uc1:ucContent runat="server" ID="ucContent" ContentName="MainText"/>
+            </p>
 		</div>
 		<a href="#Product" class="more scrolly"></a>
 	</section>
@@ -55,7 +57,7 @@
 				</p>
 			</header>
 			<div class="">
-                <iframe src="/SendMail/" style="width:100%;height:380px;"></iframe>
+                <iframe src="/SendMail/" style="width:100%;height:450px;"></iframe>
 			</div>
 		</div>
 	</section>

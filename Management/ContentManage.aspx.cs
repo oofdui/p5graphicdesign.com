@@ -52,7 +52,7 @@ public partial class Management_ContentManage : System.Web.UI.Page
         strSQL.Append("SELECT ");
         strSQL.Append("A.Name,");
         strSQL.Append("A.Detail,");
-        strSQL.Append("A.Content,");
+        strSQL.Append("A.Content,A.ContentEN,");
         strSQL.Append("A.Sort,");
         strSQL.Append("A.StatusFlag ");
         strSQL.Append("FROM ");
@@ -66,6 +66,7 @@ public partial class Management_ContentManage : System.Web.UI.Page
             txtName.Text = dt.Rows[0]["Name"].ToString();
             txtDetail.Text = dt.Rows[0]["Detail"].ToString();
             ucContent.Text = dt.Rows[0]["Content"].ToString();
+            ucContentEN.Text = dt.Rows[0]["ContentEN"].ToString();
             txtSort.Text = dt.Rows[0]["Sort"].ToString();
             cbActive.Checked = (dt.Rows[0]["StatusFlag"].ToString() == "A" ? true : false);
         }
@@ -97,6 +98,7 @@ public partial class Management_ContentManage : System.Web.UI.Page
             if (clsSQL.Update("Content",
                 new string[,]{
                     {"Content","'" + ucContent.Text.SQLQueryFilter() + "'"},
+                    {"ContentEN","'" + ucContentEN.Text.SQLQueryFilter() + "'"},
                     {"MUser",clsSecurity.LoginUID},
                     {"MWhen",functionGetDate},
                     {"Sort",txtSort.Text.SQLQueryFilter()},
@@ -121,6 +123,7 @@ public partial class Management_ContentManage : System.Web.UI.Page
                     {"Name","'" + txtName.Text.SQLQueryFilter() + "'"},
                     {"Detail","'" + txtDetail.Text.SQLQueryFilter() + "'"},
                     {"Content","'" + ucContent.Text.SQLQueryFilter() + "'"},
+                    {"ContentEN","'" + ucContentEN.Text.SQLQueryFilter() + "'"},
                     {"CUser",clsSecurity.LoginUID},
                     {"CWhen",functionGetDate},
                     {"MUser",clsSecurity.LoginUID},

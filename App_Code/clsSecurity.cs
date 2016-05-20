@@ -492,8 +492,8 @@ public class clsSecurity
                 strSQL.Append("[User].UID,");
                 strSQL.Append("[User].Username,");
                 strSQL.Append("UserGroup.Name AS UserGroupName,");
-                strSQL.Append("IFNULL(UserGroup.Authority,'') AS GroupAuthority,");
-                strSQL.Append("IFNULL([User].Authority,'') AS UserAuthority ");
+                strSQL.Append("ISNULL(UserGroup.Authority,'') AS GroupAuthority,");
+                strSQL.Append("ISNULL([User].Authority,'') AS UserAuthority ");
                 strSQL.Append("FROM ");
                 strSQL.Append("[User] ");
                 strSQL.Append("INNER JOIN UserGroup ");

@@ -49,6 +49,7 @@ public partial class Management_PortfolioGroupManage : System.Web.UI.Page
     #region Global Variable
     private clsSecurity clsSecurity = new clsSecurity();
     private clsDefault clsDefault = new clsDefault();
+    private clsLanguage clsLanguage = new clsLanguage();
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
     private string functionGetDate = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "NOW()" : "GETDATE()");
     public string tableDefault = "PhotoGalleryGroup";
@@ -91,8 +92,8 @@ public partial class Management_PortfolioGroupManage : System.Web.UI.Page
         #region SQL Query
         strSQL.Append("SELECT ");
         strSQL.Append("A.Photo,");
-        strSQL.Append("A.Name,");
-        strSQL.Append("A.Detail,");
+        strSQL.Append("A.Name,A.NameEN,");
+        strSQL.Append("A.Detail,A.DetailEN,");
         strSQL.Append("A.MetaKeywords,");
         strSQL.Append("A.MetaDescription,");
         strSQL.Append("A.Sort,");
@@ -105,6 +106,7 @@ public partial class Management_PortfolioGroupManage : System.Web.UI.Page
         dt = clsSQL.Bind(strSQL.ToString(), new string[,] { { parameterChar + "ID", id } });
         if (dt != null && dt.Rows.Count > 0)
         {
+            vdPhoto.Enabled = false;
             #region Data Builder
             if (dt.Rows[0]["Photo"] != DBNull.Value)
             {
@@ -112,6 +114,8 @@ public partial class Management_PortfolioGroupManage : System.Web.UI.Page
             }
             txtName.Text = dt.Rows[0]["Name"].ToString();
             txtDetail.Text = dt.Rows[0]["Detail"].ToString();
+            txtNameEN.Text = dt.Rows[0]["NameEN"].ToString();
+            txtDetailEN.Text = dt.Rows[0]["DetailEN"].ToString();
             txtMetaKeyword.Text = dt.Rows[0]["MetaKeywords"].ToString();
             txtMetaDescription.Text = dt.Rows[0]["MetaDescription"].ToString();
             txtSort.Text = dt.Rows[0]["Sort"].ToString();
@@ -224,6 +228,8 @@ public partial class Management_PortfolioGroupManage : System.Web.UI.Page
                     {"Photo",(!string.IsNullOrEmpty(photoName)?"'"+pathUpload+photoName+"'":"Photo")},
                     {"Name","'"+clsSQL.CodeFilter(txtName.Text)+"'"},
                     {"Detail","'"+clsSQL.CodeFilter(txtDetail.Text)+"'"},
+                    {"NameEN","'"+clsSQL.CodeFilter(txtNameEN.Text)+"'"},
+                    {"DetailEN","'"+clsSQL.CodeFilter(txtDetailEN.Text)+"'"},
                     {"MetaKeywords","'"+clsSQL.CodeFilter(txtMetaKeyword.Text)+"'"},
                     {"MetaDescription","'"+clsSQL.CodeFilter(txtMetaDescription.Text)+"'"},
                     {"MUser","'" + clsSecurity.LoginUID + "'"},
@@ -280,6 +286,8 @@ public partial class Management_PortfolioGroupManage : System.Web.UI.Page
                     {"Photo",(!string.IsNullOrEmpty(photoName)?"'"+pathUpload+photoName+"'":"null")},
                     {"Name","'"+clsSQL.CodeFilter(txtName.Text)+"'"},
                     {"Detail","'"+clsSQL.CodeFilter(txtDetail.Text)+"'"},
+                    {"NameEN","'"+clsSQL.CodeFilter(txtNameEN.Text)+"'"},
+                    {"DetailEN","'"+clsSQL.CodeFilter(txtDetailEN.Text)+"'"},
                     {"Type","'Experiences'"},
                     {"MetaKeywords","'"+clsSQL.CodeFilter(txtMetaKeyword.Text)+"'"},
                     {"MetaDescription","'"+clsSQL.CodeFilter(txtMetaDescription.Text)+"'"},

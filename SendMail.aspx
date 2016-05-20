@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SendMail.aspx.cs" Inherits="SendMail" ValidateRequest="false"%>
 
 <%@ Register Src="~/UserControl/ucTextEditor/ucTextEditor.ascx" TagPrefix="uc1" TagName="ucTextEditor" %>
+<%@ Register Src="~/UserControl/ucContent/ucContent.ascx" TagPrefix="uc1" TagName="ucContent" %>
+
 
 
 <!DOCTYPE html>
@@ -92,6 +94,9 @@
                             </div>
                         </div>
                         <asp:HiddenField ID="hidFileName" runat="server" />
+                    </td>
+                    <td style="width:300px;vertical-align:top;" rowspan="8">
+                        <uc1:ucContent runat="server" ID="ucContent" ContentName="JobHowTo"/>
                     </td>
                 </tr>
                 <tr>

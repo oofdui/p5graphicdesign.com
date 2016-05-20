@@ -15,6 +15,7 @@ public partial class Product : System.Web.UI.Page
     public string productDetail = "";
     public string productContent = "";
     clsDefault clsDefault = new clsDefault();
+    clsLanguage clsLanguage = new clsLanguage();
     #endregion
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -38,7 +39,7 @@ public partial class Product : System.Web.UI.Page
         #region Procedure
         #region SQLQuery
         strSQL.Append("SELECT ");
-        strSQL.Append("Icon,Name,Detail,Content ");
+        strSQL.Append("Icon,Name,Detail,Content,NameEN,DetailEN,ContentEN ");
         strSQL.Append("FROM ");
         strSQL.Append("ProductGroup ");
         strSQL.Append("WHERE ");
@@ -49,9 +50,18 @@ public partial class Product : System.Web.UI.Page
         if (dt != null && dt.Rows.Count > 0)
         {
             productIcon = dt.Rows[0]["Icon"].ToString();
-            productName = dt.Rows[0]["Name"].ToString();
-            productDetail = dt.Rows[0]["Detail"].ToString();
-            productContent = dt.Rows[0]["Content"].ToString().Replace("../Upload/","/Upload/");
+            if (clsLanguage.LanguageCurrent == "th-TH")
+            {
+                productName = dt.Rows[0]["Name"].ToString();
+                productDetail = dt.Rows[0]["Detail"].ToString();
+                productContent = dt.Rows[0]["Content"].ToString().Replace("../Upload/", "/Upload/");
+            }
+            else
+            {
+                productName = dt.Rows[0]["NameEN"].ToString();
+                productDetail = dt.Rows[0]["DetailEN"].ToString();
+                productContent = dt.Rows[0]["ContentEN"].ToString().Replace("../Upload/", "/Upload/");
+            }
 
             this.Title = productName;
             lblIcon.Text = "<img src='"+productIcon+"' alt='"+productName+"' title='"+productName+"' style='width:100px;'/>";
