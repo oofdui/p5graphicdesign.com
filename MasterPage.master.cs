@@ -46,7 +46,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         strSQL.Append("SELECT ");
         strSQL.Append("UID,Name,Detail,NameEN,DetailEN ");
         strSQL.Append("FROM ");
-        strSQL.Append("ProductGroup ");
+        strSQL.Append("P5_ProductGroup ");
         strSQL.Append("WHERE ");
         strSQL.Append("StatusFlag='A' ");
         strSQL.Append("ORDER BY ");

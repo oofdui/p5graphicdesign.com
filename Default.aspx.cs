@@ -33,7 +33,7 @@ public partial class _Default : System.Web.UI.Page
         strSQL.Append("SELECT ");
         strSQL.Append("UID,Icon,Name,Detail,NameEN,DetailEN ");
         strSQL.Append("FROM ");
-        strSQL.Append("productgroup ");
+        strSQL.Append("P5_ProductGroup ");
         strSQL.Append("WHERE ");
         strSQL.Append("StatusFlag='A' ");
         strSQL.Append("ORDER BY ");
@@ -72,7 +72,7 @@ public partial class _Default : System.Web.UI.Page
         strSQL.Append("SELECT ");
         strSQL.Append("UID,Photo,Name,Detail,NameEN,DetailEN ");
         strSQL.Append("FROM ");
-        strSQL.Append("PhotoGalleryGroup ");
+        strSQL.Append("P5_PhotoGalleryGroup ");
         strSQL.Append("WHERE ");
         strSQL.Append("StatusFlag='A' ");
         strSQL.Append("ORDER BY ");

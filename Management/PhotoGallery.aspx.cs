@@ -15,9 +15,9 @@ public partial class Management_PhotoGallery : System.Web.UI.Page
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
     private string functionGetDate = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "NOW()" : "GETDATE()");
     public string pathUpload = "/Upload/PhotoGallery/";
-    public string tableDefault = "PhotoGallery";
+    public string tableDefault = "P5_PhotoGallery";
     public string webDefault = "PhotoGallery.aspx";
-    public string tableParrent = "PhotoGalleryGroup";
+    public string tableParrent = "P5_PhotoGalleryGroup";
     public string webParrent = "PortfolioGroup.aspx";
     public string webManage = "PhotoGalleryManage.aspx";
     #endregion

@@ -24,7 +24,7 @@ public partial class SendMail : System.Web.UI.Page
         {
             #region SQLQuery
             strSQL.Append("INSERT INTO ");
-            strSQL.Append("job");
+            strSQL.Append("P5_Job");
             strSQL.Append("(FileName,Name,Detail,ContactName,ContactPhone,ContactEmail,Location,CWhen,MWhen)");
             strSQL.Append("VALUES(");
             strSQL.Append("'" + hidFileName.Value.Trim() + "',");

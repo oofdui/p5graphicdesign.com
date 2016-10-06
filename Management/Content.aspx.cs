@@ -32,7 +32,7 @@ public partial class Management_Content : System.Web.UI.Page
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
 
     public string pathUpload = "/Upload/PhotoInsert/";
-    public string tableDefault = "Content";
+    public string tableDefault = "P5_Content";
     public string webDefault = "Content.aspx";
     public string webManage = "ContentManage.aspx";
     #endregion

@@ -41,7 +41,7 @@ public partial class Product : System.Web.UI.Page
         strSQL.Append("SELECT ");
         strSQL.Append("Icon,Name,Detail,Content,NameEN,DetailEN,ContentEN ");
         strSQL.Append("FROM ");
-        strSQL.Append("ProductGroup ");
+        strSQL.Append("P5_ProductGroup ");
         strSQL.Append("WHERE ");
         strSQL.Append("StatusFlag='A' ");
         strSQL.Append("AND UID=@UID;");

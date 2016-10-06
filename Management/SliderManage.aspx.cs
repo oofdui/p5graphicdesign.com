@@ -15,7 +15,7 @@ public partial class Management_SliderManage : System.Web.UI.Page
     private clsDefault clsDefault = new clsDefault();
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
     private string functionGetDate = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "NOW()" : "GETDATE()");
-    public string tableDefault = "Slider";
+    public string tableDefault = "P5_Slider";
     public string webDefault = "Slider.aspx";
     public string webManage = "SliderManage.aspx";
     public string pathUpload = "/Upload/Slider/";

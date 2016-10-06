@@ -15,7 +15,7 @@ public partial class Management_UserManage : System.Web.UI.Page
     private clsDefault clsDefault = new clsDefault();
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
     private string functionGetDate = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "NOW()" : "GETDATE()");
-    public string tableDefault = "[User]";
+    public string tableDefault = "[P5_User]";
     public string webDefault = "User.aspx";
     public string webManage = "UserManage.aspx";
     public string pathUpload = "/Upload/User/";
@@ -88,7 +88,7 @@ public partial class Management_UserManage : System.Web.UI.Page
         strSQL.Append("MUser,");
         strSQL.Append("Sort,");
         strSQL.Append("StatusFlag ");
-        strSQL.Append("FROM User A ");
+        strSQL.Append("FROM "+tableDefault+" A ");
         strSQL.Append("WHERE ");
         strSQL.Append("UID=" + parameterChar + "UID;");
         #endregion
@@ -358,7 +358,7 @@ public partial class Management_UserManage : System.Web.UI.Page
         strSQL.Append("UID,");
         strSQL.Append("Name ");
         strSQL.Append("FROM ");
-        strSQL.Append("UserGroup ");
+        strSQL.Append("P5_UserGroup ");
         strSQL.Append("WHERE ");
         strSQL.Append("StatusFlag='A' ");
         strSQL.Append("ORDER BY ");

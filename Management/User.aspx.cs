@@ -16,7 +16,7 @@ public partial class Management_User : System.Web.UI.Page
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
     private string functionGetDate = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "NOW()" : "GETDATE()");
     public string pathUpload = "/Upload/User/";
-    public string tableDefault = "[User]";
+    public string tableDefault = "[P5_User]";
     public string webDefault = "User.aspx";
     public string webManage = "UserManage.aspx";
     #endregion
@@ -58,7 +58,7 @@ public partial class Management_User : System.Web.UI.Page
         strSQL.Append("A.StatusFlag ");
         strSQL.Append("FROM ");
         strSQL.Append(tableDefault + " A ");
-        strSQL.Append("INNER JOIN UserGroup B ");
+        strSQL.Append("INNER JOIN P5_UserGroup B ");
         strSQL.Append("ON A.UserGroupUID=B.UID ");
         strSQL.Append("ORDER BY B.Sort,A.Sort;");
         #endregion

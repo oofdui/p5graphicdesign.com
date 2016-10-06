@@ -16,7 +16,7 @@ public partial class Management_Product : System.Web.UI.Page
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
 
     public string pathUpload = "/Upload/Product/";
-    public string tableDefault = "ProductGroup";
+    public string tableDefault = "P5_ProductGroup";
     public string webDefault = "Product.aspx";
     public string webManage = "ProductManage.aspx";
     #endregion

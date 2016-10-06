@@ -9,7 +9,7 @@
 		<div class="inner">
 			<h2>P 5 Graphic Design</h2>
             <p><img src="/Images/logo2.png" alt="P 5 Graphic Design" style="max-width:100%;height:auto;"/></p>
-			<p>
+			<p style="font-family:Tahoma!important;font-size:12pt!important;">
                 <uc1:ucContent runat="server" ID="ucContent" ContentName="MainText"/>
             </p>
 		</div>

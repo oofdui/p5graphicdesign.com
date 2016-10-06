@@ -33,7 +33,7 @@ public partial class Management_Slider : System.Web.UI.Page
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
     private string functionGetDate = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "NOW()" : "GETDATE()");
     public string pathUpload = "/Upload/Slider/";
-    public string tableDefault = "Slider";
+    public string tableDefault = "P5_Slider";
     public string webDefault = "Slider.aspx";
     public string webManage = "SliderManage.aspx";
     #endregion

@@ -58,7 +58,7 @@ public partial class ucContent : System.Web.UI.UserControl
     }
     #endregion
     #region Database Config
-    string parameterChar = "?"; //SQLServer=@ MySQL=?
+    string parameterChar = "@"; //SQLServer=@ MySQL=?
     clsSQL.DBType dbType = clsSQL.DBType.MySQL;
     string cs = "cs";
     #endregion
@@ -89,7 +89,7 @@ public partial class ucContent : System.Web.UI.UserControl
         strSQL.Append("Content.Detail,");
         strSQL.Append("Content.Content,Content.ContentEN ");
         strSQL.Append("FROM ");
-        strSQL.Append("Content ");
+        strSQL.Append("P5_Content Content ");
         strSQL.Append("WHERE ");
         strSQL.Append("Content.StatusFlag='A' ");
         strSQL.Append("AND Content.Name='"+_contentName.Trim()+"';");

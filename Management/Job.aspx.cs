@@ -17,7 +17,7 @@ public partial class Management_Job : System.Web.UI.Page
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
     private string functionGetDate = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "NOW()" : "GETDATE()");
     public string pathUpload = "/Upload/Job/";
-    public string tableDefault = "Job";
+    public string tableDefault = "P5_Job";
     public string webDefault = "Job.aspx";
     public string webManage = "JobManage.aspx";
     #endregion

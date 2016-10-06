@@ -16,7 +16,7 @@ public partial class Management_JobManage : System.Web.UI.Page
     private clsDefault clsDefault = new clsDefault();
     private string parameterChar = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "?" : "@");
     private string functionGetDate = (clsGlobal.dbType == clsSQL.DBType.MySQL ? "NOW()" : "GETDATE()");
-    public string tableDefault = "Job";
+    public string tableDefault = "P5_Job";
     public string webDefault = "Job.aspx";
     public string webManage = "JobManage.aspx";
     public string pathUpload = "/Upload/Job/";
@@ -67,7 +67,7 @@ public partial class Management_JobManage : System.Web.UI.Page
         strSQL.Append("A.VerifyName,");
         strSQL.Append("A.InstallName,");
         strSQL.Append("A.CWhen ");
-        strSQL.Append("FROM Job A ");
+        strSQL.Append("FROM "+ tableDefault + " A ");
         strSQL.Append("WHERE ");
         strSQL.Append("UID=" + parameterChar + "UID;");
         #endregion

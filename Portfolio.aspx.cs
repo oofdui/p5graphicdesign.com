@@ -41,8 +41,8 @@ public partial class Portfolio : System.Web.UI.Page
         strSQL.Append("SELECT ");
         strSQL.Append("A.Photo GroupPhoto, A.Name GroupName,A.NameEN GroupNameEN, A.Detail GroupDetail,A.DetailEN GroupDetailEN, B.PhotoPreview,B.Photo,B.Name,B.Detail ");
         strSQL.Append("FROM ");
-        strSQL.Append("photogallerygroup A ");
-        strSQL.Append("LEFT JOIN photogallery B ON A.UID = B.PhotoGalleryGroupUID AND B.StatusFlag = 'A' ");
+        strSQL.Append("P5_PhotoGalleryGroup A ");
+        strSQL.Append("LEFT JOIN P5_PhotoGallery B ON A.UID = B.PhotoGalleryGroupUID AND B.StatusFlag = 'A' ");
         strSQL.Append("WHERE ");
         strSQL.Append("A.StatusFlag = 'A' ");
         strSQL.Append("AND A.UID=@UID ");
